@@ -1,0 +1,9 @@
+# Hand-maintained. id is kebab-case, referenced by releases.yaml.
+- id: openai
+  name: { zh: OpenAI, en: OpenAI }
+  color: "#10a37f"
+  website: https://openai.com
+- id: anthropic
+  name: { zh: Anthropic, en: Anthropic }
+  color: "#cc785c"
+  website: https://anthropic.com

@@ -5,14 +5,14 @@
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  src: url('/ai-release-log/fonts/Fraunces.woff2') format('woff2-variations');
+  src: url('/the-model-archive/fonts/Fraunces.woff2') format('woff2-variations');
 }
 @font-face {
   font-family: 'JetBrains Mono';
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  src: url('/ai-release-log/fonts/JetBrainsMono.woff2') format('woff2-variations');
+  src: url('/the-model-archive/fonts/JetBrainsMono.woff2') format('woff2-variations');
 }
 
 *,

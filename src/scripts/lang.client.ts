@@ -1,4 +1,4 @@
-const STORAGE_KEY = 'ai-release-log:lang';
+const STORAGE_KEY = 'the-model-archive:lang';
 
 document.querySelectorAll<HTMLElement>('.lang-switch').forEach((root) => {
   root.querySelectorAll<HTMLButtonElement>('.lang-btn').forEach((btn) => {

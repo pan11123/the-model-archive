@@ -1,6 +1,6 @@
-# AI Release Log
+# The Model Archive · 模型档案馆
 
-Curated timeline of major AI vendor LLM releases. Bilingual (zh / en), static site deployed to GitHub Pages.
+A curated archive of LLM releases from every major AI vendor. Bilingual (zh / en), static site deployed to GitHub Pages.
 
 ## Add a release
 
@@ -16,7 +16,7 @@ Edit `src/data/releases.yaml` and submit a PR. Fields:
 
 ```bash
 npm ci
-npm run dev        # http://localhost:4321/ai-release-log/
+npm run dev        # http://localhost:4321/the-model-archive/
 npm test           # unit tests
 npm run test:e2e   # Playwright smoke
 npm run build      # writes dist/

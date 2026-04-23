@@ -6,12 +6,12 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: 0,
   use: {
-    baseURL: 'http://localhost:4321/ai-release-log/',
+    baseURL: 'http://localhost:4321/the-model-archive/',
     trace: 'on-first-retry',
   },
   webServer: {
     command: 'npm run preview -- --port 4321',
-    url: 'http://localhost:4321/ai-release-log',
+    url: 'http://localhost:4321/the-model-archive',
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
   },

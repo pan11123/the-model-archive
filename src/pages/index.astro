@@ -37,7 +37,7 @@ const t = getDict(lang);
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{t.siteTitle} · {t.siteSubtitle}</title>
     <meta name="description" content={t.siteSubtitle} />
-    <link rel="icon" href="/ai-release-log/favicon.svg" />
+    <link rel="icon" href="/the-model-archive/favicon.svg" />
   </head>
   <body>
     <Header lang={lang} />
@@ -60,7 +60,7 @@ const t = getDict(lang);
         var url = new URL(window.location.href);
         if (url.searchParams.has('lang')) return;
         var stored = null;
-        try { stored = localStorage.getItem('ai-release-log:lang'); } catch (e) {}
+        try { stored = localStorage.getItem('the-model-archive:lang'); } catch (e) {}
         var target = stored;
         if (!target) {
           var nav = (navigator.language || '').toLowerCase();

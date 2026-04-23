@@ -1,11 +1,11 @@
 import type { zh } from './zh';
 
 export const en: typeof zh = {
-  siteTitle: 'AI Release Log',
-  siteSubtitle: 'Release timeline for every major AI vendor',
+  siteTitle: 'The Model Archive',
+  siteSubtitle: 'A curated archive of LLM releases from every major vendor',
   hero: {
-    line1: 'AI Release',
-    line2: 'Log',
+    line1: 'The Model',
+    line2: 'Archive',
     tagline: 'Curated release timeline for leading LLM vendors',
   },
   filter: {

@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   site: 'https://pan11123.github.io',
-  base: '/ai-release-log',
+  base: '/the-model-archive',
   trailingSlash: 'never',
   build: {
     format: 'file',

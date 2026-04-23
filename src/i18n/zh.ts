@@ -1,9 +1,9 @@
 export const zh = {
-  siteTitle: 'AI Release Log',
-  siteSubtitle: '各大 AI 厂商的模型发布时刻表',
+  siteTitle: '模型档案馆',
+  siteSubtitle: '各大 AI 厂商的大语言模型发布档案',
   hero: {
-    line1: 'AI 发布',
-    line2: '日志',
+    line1: '模型',
+    line2: '档案馆',
     tagline: '头部厂商大语言模型发布时间线 · 人工整理',
   },
   filter: {

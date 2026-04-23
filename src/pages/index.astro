@@ -1,17 +1,76 @@
 ---
+import '@/styles/global.css';
+import '@/styles/components.css';
+import { loadAll } from '@/lib/loadData';
+import { filterByPeriod, type Period } from '@/lib/period';
+import { buildMatrix } from '@/lib/matrix';
+import { parseFilters } from '@/lib/url';
+import type { Lang } from '@/i18n';
+import { getDict } from '@/i18n';
 
+import Header from '@/components/Header.astro';
+import Hero from '@/components/Hero.astro';
+import FilterBar from '@/components/FilterBar.astro';
+import ReleaseTable from '@/components/ReleaseTable.astro';
+import ReleaseDetail from '@/components/ReleaseDetail.astro';
+
+const { vendors, releases } = loadAll();
+
+const f = parseFilters(Astro.url.search);
+const lang: Lang = f.lang ?? 'en';
+const period: Period = f.period ?? 'last-12m';
+
+const selectedVendorIds = new Set(f.vendors ?? vendors.map((v) => v.id));
+
+const periodReleases = filterByPeriod(releases, period);
+const matrix = buildMatrix(periodReleases, vendors, selectedVendorIds);
+
+const availableYears = Array.from(new Set(releases.map((r) => r.date.slice(0, 4))))
+  .sort((a, b) => b.localeCompare(a));
+
+const t = getDict(lang);
 ---
+<!doctype html>
+<html lang={lang === 'zh' ? 'zh-CN' : 'en'}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{t.siteTitle} · {t.siteSubtitle}</title>
+    <meta name="description" content={t.siteSubtitle} />
+    <link rel="icon" href="/ai-release-log/favicon.svg" />
+  </head>
+  <body>
+    <Header lang={lang} />
+    <main>
+      <Hero lang={lang} totalReleases={releases.length} totalVendors={vendors.length} />
+      <FilterBar
+        vendors={vendors}
+        selectedVendorIds={selectedVendorIds}
+        period={period}
+        availableYears={availableYears}
+        lang={lang}
+      />
+      <ReleaseTable matrix={matrix} lang={lang} />
+    </main>
+    <ReleaseDetail releases={releases} vendors={vendors} lang={lang} />
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+    <script is:inline>
+      // Client-side language auto-detection (only when no ?lang and no stored)
+      (function () {
+        var url = new URL(window.location.href);
+        if (url.searchParams.has('lang')) return;
+        var stored = null;
+        try { stored = localStorage.getItem('ai-release-log:lang'); } catch (e) {}
+        var target = stored;
+        if (!target) {
+          var nav = (navigator.language || '').toLowerCase();
+          target = nav.indexOf('zh') === 0 ? 'zh' : 'en';
+        }
+        if (target !== 'zh' && target !== 'en') return;
+        if (document.documentElement.lang.slice(0, 2) === target) return;
+        url.searchParams.set('lang', target);
+        window.location.replace(url.toString());
+      })();
+    </script>
+  </body>
 </html>

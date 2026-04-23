@@ -37,7 +37,6 @@ const STATIC_TEXT: Array<{ sel: string; fn: (d: Dict) => string; html?: boolean 
   { sel: '.hero-meta .kv:nth-child(2) .k', fn: d => d.hero.kv.totalReleases },
   { sel: '.hero-meta .kv:nth-child(3) .k', fn: d => d.hero.kv.last7Days },
   { sel: '.hero-meta .kv:nth-child(4) .k', fn: d => d.hero.kv.mostRecent },
-  { sel: '.hero-ticker .tag', fn: d => d.ticker.tag },
   // Filter
   { sel: '.filter-heading h2', fn: d => `${d.filter.heading} `, html: true, selOverride: '.filter-heading h2' },
   { sel: '.filter-heading .dim', fn: d => d.filter.subtitle },

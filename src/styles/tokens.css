@@ -1,27 +1,52 @@
 :root {
+  /* Canvas & surfaces */
   --canvas: #0a0906;
-  --canvas-2: #15110b;
-  --paper: #f5e9d3;
+  --canvas-lift: #13100b;
+  --canvas-lifted: #1c1811;
+
+  /* Text tiers */
+  --text: #f2ebd9;
+  --text-dim: #9a8f7c;
+  --text-faded: #5a5347;
+  --paper: var(--text);
+
+  /* Accents */
   --plasma: #ff9f2f;
-  --plasma-soft: #ffb864;
+  --plasma-soft: #ffbe6d;
+  --plasma-glow: rgba(255, 159, 47, 0.4);
+  --plasma-dim: rgba(255, 159, 47, 0.18);
   --cyan: #4be3c1;
-  --ink: #1a1814;
-  --rule: rgba(245, 233, 211, 0.14);
-  --rule-strong: rgba(245, 233, 211, 0.32);
+  --cyan-glow: rgba(75, 227, 193, 0.35);
+  --critical: #ff5f5f;
+
+  /* Lines */
+  --grid: rgba(242, 235, 217, 0.035);
+  --grid-strong: rgba(242, 235, 217, 0.08);
+  --rule: rgba(242, 235, 217, 0.14);
+  --rule-strong: rgba(242, 235, 217, 0.32);
+  --border: #251e15;
+  --border-hot: #3a2d1c;
+
+  /* Shadows */
+  --shadow-lg: 0 20px 60px -20px rgba(255, 159, 47, 0.18);
   --shadow-plasma: 0 0 24px rgba(255, 159, 47, 0.35);
 
+  /* Fonts */
   --font-display: 'Fraunces', 'Source Serif 4', ui-serif, Georgia, serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
   --font-sans: 'Fraunces', ui-sans-serif, system-ui, sans-serif;
 
+  /* Type scale */
   --step-0: clamp(0.875rem, 0.82rem + 0.25vw, 1rem);
   --step-1: clamp(1rem, 0.92rem + 0.4vw, 1.2rem);
-  --step-hero: clamp(3.5rem, 6vw + 1rem, 8rem);
+  --step-hero: clamp(84px, 16vw, 230px);
 
+  /* Radii */
   --r-sm: 2px;
   --r-md: 4px;
   --r-lg: 10px;
 
+  /* Spacing */
   --sp-1: 4px;
   --sp-2: 8px;
   --sp-3: 12px;
@@ -29,4 +54,7 @@
   --sp-5: 32px;
   --sp-6: 56px;
   --sp-7: 96px;
+
+  /* Statusbar height (used by table thead sticky top) */
+  --statusbar-h: 32px;
 }

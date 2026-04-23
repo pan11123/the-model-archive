@@ -1,0 +1,19 @@
+---
+import type { Lang } from '@/lib/url';
+import { getDict } from '@/i18n';
+interface Props { lang: Lang; totalReleases: number; totalVendors: number; }
+const { lang, totalReleases, totalVendors } = Astro.props;
+const t = getDict(lang);
+---
+<section class="hero">
+  <div class="hero-meta label">
+    <span>// Release Log</span>
+    <span>//</span>
+    <span class="mono">{totalReleases} entries · {totalVendors} vendors</span>
+  </div>
+  <h1 class="hero-title">
+    <span class="hero-line hero-chroma" data-text={t.hero.line1}>{t.hero.line1}</span>
+    <span class="hero-line hero-accent">{t.hero.line2}</span>
+  </h1>
+  <p class="hero-tagline">{t.hero.tagline}</p>
+</section>

@@ -31,3 +31,45 @@
 .lang-btn:hover { opacity: 1; }
 .lang-btn.active { opacity: 1; color: var(--plasma); border-color: var(--plasma); border-radius: var(--r-sm); }
 .lang-sep { opacity: 0.4; }
+
+.hero {
+  padding: var(--sp-7) var(--sp-5) var(--sp-6);
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+.hero-meta {
+  display: flex;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-5);
+  color: var(--plasma-soft);
+}
+.hero-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--step-hero);
+  line-height: 0.9;
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1;
+}
+.hero-line { display: block; }
+.hero-chroma {
+  color: var(--paper);
+  position: relative;
+  text-shadow:
+    -2px 0 color-mix(in srgb, var(--plasma) 70%, transparent),
+    2px 0 color-mix(in srgb, var(--cyan) 70%, transparent);
+}
+.hero-accent {
+  font-style: italic;
+  color: var(--plasma);
+  text-shadow: var(--shadow-plasma);
+  font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1;
+}
+.hero-tagline {
+  margin-top: var(--sp-5);
+  max-width: 56ch;
+  font-size: var(--step-1);
+  color: color-mix(in srgb, var(--paper) 70%, transparent);
+}

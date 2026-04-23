@@ -1,0 +1,55 @@
+---
+import type { Vendor } from '@/lib/schemas';
+import type { Lang } from '@/lib/url';
+import type { Period } from '@/lib/period';
+import { getDict } from '@/i18n';
+interface Props {
+  vendors: Vendor[];
+  selectedVendorIds: Set<string>;
+  period: Period;
+  availableYears: string[];
+  lang: Lang;
+}
+const { vendors, selectedVendorIds, period, availableYears, lang } = Astro.props;
+const t = getDict(lang);
+---
+<section class="filter-bar" data-initial-period={period}>
+  <div class="filter-group">
+    <span class="filter-label label">{t.filter.vendors}</span>
+    <div class="vendor-pills" role="group">
+      {vendors.map((v) => (
+        <button
+          type="button"
+          class:list={["pill", { active: selectedVendorIds.has(v.id) }]}
+          data-vendor={v.id}
+          style={`--vendor-color: ${v.color};`}
+          aria-pressed={selectedVendorIds.has(v.id)}
+        >
+          <span class="pill-dot" aria-hidden="true"></span>
+          <span>{v.name[lang]}</span>
+        </button>
+      ))}
+    </div>
+    <div class="pill-actions mono">
+      <button type="button" data-action="select-all" class="pill-action">{t.filter.all}</button>
+      <span>/</span>
+      <button type="button" data-action="select-none" class="pill-action">{t.filter.none}</button>
+    </div>
+  </div>
+
+  <div class="filter-group">
+    <span class="filter-label label">{t.filter.period}</span>
+    <select class="period-select mono" data-current={period}>
+      <option value="last-12m">{t.filter.periodLast12m}</option>
+      <option value="last-6m">{t.filter.periodLast6m}</option>
+      {availableYears.map((y) => (
+        <option value={y}>{t.filter.periodYear(y)}</option>
+      ))}
+      <option value="all">{t.filter.periodAll}</option>
+    </select>
+  </div>
+</section>
+
+<script>
+  import '@/scripts/filters.client.ts';
+</script>

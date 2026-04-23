@@ -1,19 +1,66 @@
 ---
+import type { Release, Vendor } from '@/lib/schemas';
 import type { Lang } from '@/lib/url';
 import { getDict } from '@/i18n';
-interface Props { lang: Lang; totalReleases: number; totalVendors: number; }
-const { lang, totalReleases, totalVendors } = Astro.props;
+import { formatMMDD } from '@/lib/stats';
+
+interface Props {
+  lang: Lang;
+  totalReleases: number;
+  totalVendors: number;
+  lastSevenDayCount: number;
+  mostRecentDate: string;
+  recent: Release[];
+  vendorsById: Record<string, Vendor>;
+}
+const { lang, totalReleases, totalVendors, lastSevenDayCount, mostRecentDate, recent, vendorsById } = Astro.props;
 const t = getDict(lang);
+const tickerItems = [...recent, ...recent];
 ---
 <section class="hero">
-  <div class="hero-meta label">
-    <span>// Release Log</span>
-    <span>//</span>
-    <span class="mono">{totalReleases} entries · {totalVendors} vendors</span>
+  <div class="hero-eyebrow">
+    <span>{t.hero.eyebrow}</span>
+    <span class="sub">· {t.hero.eyebrowSub}</span>
   </div>
+
   <h1 class="hero-title">
-    <span class="hero-line hero-chroma" data-text={t.hero.line1}>{t.hero.line1}</span>
-    <span class="hero-line hero-accent">{t.hero.line2}</span>
+    {t.hero.line1}<br><span class="italic">{t.hero.line2}</span>
   </h1>
-  <p class="hero-tagline">{t.hero.tagline}</p>
+
+  <p class="hero-sub" set:html={t.hero.subDescription} />
+
+  <div class="hero-meta">
+    <div class="kv">
+      <span class="k">{t.hero.kv.vendors}</span>
+      <span class="v">{totalVendors}</span>
+    </div>
+    <div class="kv">
+      <span class="k">{t.hero.kv.totalReleases}</span>
+      <span class="v">{totalReleases}</span>
+    </div>
+    <div class="kv">
+      <span class="k">{t.hero.kv.last7Days}</span>
+      <span class="v accent">+{lastSevenDayCount}</span>
+    </div>
+    <div class="kv">
+      <span class="k">{t.hero.kv.mostRecent}</span>
+      <span class="v">{formatMMDD(mostRecentDate)}</span>
+    </div>
+  </div>
+
+  <div class="hero-ticker">
+    <span class="tag">{t.ticker.tag}</span>
+    <span class="feed">
+      {tickerItems.map((r) => {
+        const v = vendorsById[r.vendor];
+        return (
+          <span class="item">
+            <span class="date">{r.date}</span>
+            <span class="vendor">{v?.name[lang] ?? r.vendor}</span>
+            <span class="model">{r.model}</span>
+          </span>
+        );
+      })}
+    </span>
+  </div>
 </section>

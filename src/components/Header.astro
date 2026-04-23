@@ -1,0 +1,18 @@
+---
+import LangSwitch from './LangSwitch.astro';
+import type { Lang } from '@/lib/url';
+import { getDict } from '@/i18n';
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const t = getDict(lang);
+---
+<header class="site-header">
+  <div class="brand">
+    <span class="brand-mark label">AI·RL</span>
+    <span class="brand-name">{t.siteTitle}</span>
+  </div>
+  <nav class="site-nav">
+    <LangSwitch lang={lang} />
+    <a class="mono" href="https://github.com/pan11123/ai-release-log" target="_blank" rel="noreferrer noopener">GitHub ↗</a>
+  </nav>
+</header>

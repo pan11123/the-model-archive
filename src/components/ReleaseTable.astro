@@ -3,55 +3,67 @@ import type { Matrix } from '@/lib/matrix';
 import type { Lang } from '@/lib/url';
 import { getDict } from '@/i18n';
 import ReleaseChip from './ReleaseChip.astro';
+
 interface Props { matrix: Matrix; lang: Lang; }
 const { matrix, lang } = Astro.props;
 const t = getDict(lang);
 const vendorById = new Map(matrix.columns.map(v => [v.id, v]));
 ---
-<section class="table-wrap" aria-label={t.table.colDate}>
+<section class="matrix-wrap">
+  <div class="matrix-head">
+    <h2>
+      <span class="num">{t.matrix.number('001')}</span>
+      {t.matrix.heading}
+    </h2>
+    <div class="legend">
+      <span><span class="dash">—</span> {t.matrix.legendEmpty}</span>
+      <span>● {t.matrix.legendActive}</span>
+    </div>
+  </div>
+
   {matrix.rows.length === 0 ? (
     <p class="empty">{t.table.empty}</p>
   ) : (
-    <table class="release-table">
-      <thead>
-        <tr>
-          <th class="col-date label">{t.table.colDate}</th>
-          {matrix.columns.map((v) => (
-            <th
-              class="col-vendor"
-              data-vendor={v.id}
-              style={`--vendor-color: ${v.color};`}
-            >
-              <span class="vendor-bar" aria-hidden="true"></span>
-              <span class="vendor-name">{v.name[lang]}</span>
-            </th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {matrix.rows.map((row) => (
-          <tr data-date={row.date}>
-            <td class="col-date mono">{row.date}</td>
-            {matrix.columns.map((v) => {
-              const cell = row.cells[v.id];
-              const vendor = vendorById.get(v.id)!;
-              return (
-                <td class="col-vendor" data-vendor={v.id}>
-                  {cell && cell.length > 0 ? (
-                    <div class="cell-stack">
-                      {cell.map((r) => (
-                        <ReleaseChip release={r} vendor={vendor} lang={lang} />
-                      ))}
-                    </div>
-                  ) : (
-                    <span class="empty-cell" aria-hidden="true">—</span>
-                  )}
-                </td>
-              );
-            })}
+    <div class="matrix-scroll">
+      <table class="release-table">
+        <thead>
+          <tr>
+            <th class="col-date">{t.table.colDate}</th>
+            {matrix.columns.map((v) => (
+              <th class="col-vendor" data-vendor={v.id} style={`--vc: ${v.color};`}>
+                <div class="vcol">
+                  <div class="swatch" aria-hidden="true"></div>
+                  <div class="name">{v.name[lang]}</div>
+                </div>
+              </th>
+            ))}
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {matrix.rows.map((row) => (
+            <tr data-date={row.date}>
+              <td class="col-date">{row.date}</td>
+              {matrix.columns.map((v) => {
+                const cell = row.cells[v.id];
+                const vendor = vendorById.get(v.id)!;
+                return (
+                  <td class="col-vendor" data-vendor={v.id}>
+                    {cell && cell.length > 0 ? (
+                      <div class="cell-stack">
+                        {cell.map((r) => (
+                          <ReleaseChip release={r} vendor={vendor} lang={lang} />
+                        ))}
+                      </div>
+                    ) : (
+                      <span class="empty" aria-hidden="true">—</span>
+                    )}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   )}
 </section>

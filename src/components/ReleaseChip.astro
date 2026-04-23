@@ -2,8 +2,9 @@
 import type { Release, Vendor } from '@/lib/schemas';
 import type { Lang } from '@/lib/url';
 import { releaseAnchor } from '@/lib/slug';
+
 interface Props { release: Release; vendor: Vendor; lang: Lang; }
-const { release, vendor, lang } = Astro.props;
+const { release, vendor } = Astro.props;
 const anchor = releaseAnchor(release.vendor, release.model, release.date);
 ---
 <button
@@ -11,8 +12,7 @@ const anchor = releaseAnchor(release.vendor, release.model, release.date);
   type="button"
   data-anchor={anchor}
   data-vendor={release.vendor}
-  style={`--vendor-color: ${vendor.color};`}
+  style={`--vc: ${vendor.color};`}
 >
-  <span class="chip-dot" aria-hidden="true"></span>
-  <span class="chip-model mono">{release.model}</span>
+  <span class="chip-model">{release.model}</span>
 </button>

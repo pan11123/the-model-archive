@@ -1,4 +1,3 @@
-# Hand-maintained. id is kebab-case, referenced by releases.yaml.
 - id: openai
   name: { zh: OpenAI, en: OpenAI }
   color: "#10a37f"
@@ -7,3 +6,35 @@
   name: { zh: Anthropic, en: Anthropic }
   color: "#cc785c"
   website: https://anthropic.com
+- id: google
+  name: { zh: Google, en: Google }
+  color: "#4285f4"
+  website: https://deepmind.google
+- id: xai
+  name: { zh: xAI, en: xAI }
+  color: "#000000"
+  website: https://x.ai
+- id: deepseek
+  name: { zh: DeepSeek, en: DeepSeek }
+  color: "#4d6bfe"
+  website: https://deepseek.com
+- id: alibaba
+  name: { zh: 阿里通义, en: Alibaba Qwen }
+  color: "#ff6a00"
+  website: https://qwenlm.github.io
+- id: zhipu
+  name: { zh: 智谱, en: Zhipu AI }
+  color: "#1565c0"
+  website: https://z.ai
+- id: moonshot
+  name: { zh: 月之暗面 Kimi, en: Moonshot Kimi }
+  color: "#6a1b9a"
+  website: https://kimi.com
+- id: minimax
+  name: { zh: MiniMax, en: MiniMax }
+  color: "#e91e63"
+  website: https://minimax.io
+- id: bytedance
+  name: { zh: 字节豆包, en: ByteDance Doubao }
+  color: "#ff3366"
+  website: https://doubao.com

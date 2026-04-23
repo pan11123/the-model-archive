@@ -1,0 +1,22 @@
+---
+import type { Lang } from '@/lib/url';
+import { getDict } from '@/i18n';
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const t = getDict(lang);
+const REPO = 'https://github.com/pan11123/the-model-archive';
+---
+<footer class="site-footer">
+  <div class="footer-main">
+    <span class="brand-tag">THE MODEL ARCHIVE</span>
+    <span class="sep">·</span>
+    <span set:html={t.footer.creditLine} />
+    <span class="sep">·</span>
+    <a href={`${REPO}/issues/new`}>{t.footer.openIssue}</a>
+  </div>
+  <div class="marks">
+    <a href={REPO}>{t.footer.github}</a>
+    <a href={`${REPO}/blob/main/src/data/releases.yaml`}>{t.footer.data}</a>
+    <a aria-disabled="true" title="Coming soon" class="disabled">{t.footer.rss}</a>
+  </div>
+</footer>

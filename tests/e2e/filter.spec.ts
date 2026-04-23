@@ -9,9 +9,9 @@ test('deselecting a vendor hides its column', async ({ page }) => {
   await expect(page).toHaveURL(/vendors=/);
 });
 
-test('period dropdown reloads with matching query', async ({ page }) => {
+test('period button reloads with matching query', async ({ page }) => {
   await page.goto('./?lang=en');
-  await page.selectOption('.period-select', 'all');
+  await page.locator('.period-btn[data-v="all"]').click();
   await page.waitForURL(/period=all/);
   await expect(page.locator('table.release-table tbody tr').first()).toBeVisible();
 });

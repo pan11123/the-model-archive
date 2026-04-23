@@ -1,6 +1,6 @@
 const STORAGE_KEY = 'the-model-archive:lang';
 
-document.querySelectorAll<HTMLElement>('.lang-switch').forEach((root) => {
+document.querySelectorAll<HTMLElement>('.lang-toggle').forEach((root) => {
   root.querySelectorAll<HTMLButtonElement>('.lang-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
       const target = btn.dataset.target;

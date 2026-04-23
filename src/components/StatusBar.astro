@@ -1,0 +1,31 @@
+---
+import type { Lang } from '@/lib/url';
+import { getDict } from '@/i18n';
+interface Props {
+  lang: Lang;
+  version: string;
+  buildDate: string;
+  totalReleases: number;
+  lastSevenDayCount: number;
+}
+const { lang, version, buildDate, totalReleases, lastSevenDayCount } = Astro.props;
+const t = getDict(lang);
+---
+<div class="statusbar">
+  <span class="sb-brand">
+    <span class="dot" aria-hidden="true"></span>
+    <strong>TMA</strong> / V{version}
+  </span>
+  <span class="sb-sep">—</span>
+  <span class="sb-meta">
+    {t.statusbar.sysPrefix} · {buildDate} UTC · {t.statusbar.entries(totalReleases)} · {t.statusbar.delta(lastSevenDayCount)}
+  </span>
+  <span></span>
+  <span class="lang-toggle">
+    <button type="button" data-target="zh" class:list={["lang-btn", { active: lang === 'zh' }]}>中</button>
+    <button type="button" data-target="en" class:list={["lang-btn", { active: lang === 'en' }]}>EN</button>
+  </span>
+</div>
+<script>
+  import '@/scripts/lang.client.ts';
+</script>

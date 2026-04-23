@@ -8,7 +8,7 @@ import { parseFilters } from '@/lib/url';
 import type { Lang } from '@/i18n';
 import { getDict } from '@/i18n';
 
-import Header from '@/components/Header.astro';
+import StatusBar from '@/components/StatusBar.astro';
 import Hero from '@/components/Hero.astro';
 import FilterBar from '@/components/FilterBar.astro';
 import ReleaseTable from '@/components/ReleaseTable.astro';
@@ -40,7 +40,7 @@ const t = getDict(lang);
     <link rel="icon" href="/the-model-archive/favicon.svg" />
   </head>
   <body>
-    <Header lang={lang} />
+    <StatusBar lang={lang} version="0.0.1" buildDate="2026-04-23" totalReleases={releases.length} lastSevenDayCount={0} />
     <main>
       <Hero lang={lang} totalReleases={releases.length} totalVendors={vendors.length} />
       <FilterBar

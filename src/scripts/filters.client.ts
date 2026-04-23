@@ -1,84 +1,110 @@
 import { parseFilters, serializeFilters, type Filters } from '@/lib/url';
 import { isValidPeriod, type Period } from '@/lib/period';
 
+const META_SELECTOR = '[data-role="meta"]';
+
 function getFilters(): Filters {
   return parseFilters(window.location.search);
 }
 
-function setFilters(next: Filters) {
+function assign(next: Filters) {
+  const qs = serializeFilters(next);
+  const url = `${window.location.pathname}${qs}${window.location.hash}`;
+  window.location.assign(url);
+}
+
+function replaceUrl(next: Filters) {
   const qs = serializeFilters(next);
   const url = `${window.location.pathname}${qs}${window.location.hash}`;
   window.history.replaceState(null, '', url);
-  applyFilters(next);
 }
 
-function applyFilters(f: Filters) {
-  const allVendorButtons = document.querySelectorAll<HTMLButtonElement>('.pill[data-vendor]');
+function applyVendorVisibility(f: Filters) {
+  const allPills = document.querySelectorAll<HTMLButtonElement>('.pill[data-vendor]');
   const selected = f.vendors ? new Set(f.vendors) : null;
+  const activeSet = new Set<string>();
 
-  allVendorButtons.forEach((btn) => {
+  allPills.forEach((btn) => {
     const id = btn.dataset.vendor!;
     const active = selected ? selected.has(id) : true;
     btn.classList.toggle('active', active);
     btn.setAttribute('aria-pressed', String(active));
-  });
-
-  const activeVendorSet = new Set<string>();
-  allVendorButtons.forEach((btn) => {
-    if (btn.classList.contains('active')) activeVendorSet.add(btn.dataset.vendor!);
+    if (active) activeSet.add(id);
   });
 
   document.querySelectorAll<HTMLElement>('[data-vendor]').forEach((el) => {
     if (el.classList.contains('pill')) return;
-    const id = el.dataset.vendor!;
-    el.classList.toggle('hidden', !activeVendorSet.has(id));
+    el.classList.toggle('hidden', !activeSet.has(el.dataset.vendor!));
   });
 
   document.querySelectorAll<HTMLTableRowElement>('tr[data-date]').forEach((row) => {
-    const visibleCells = row.querySelectorAll('td.col-vendor:not(.hidden) .chip');
-    row.classList.toggle('hidden', visibleCells.length === 0);
+    const visible = row.querySelectorAll('td.col-vendor:not(.hidden) .chip');
+    row.classList.toggle('hidden', visible.length === 0);
   });
 
-  const select = document.querySelector<HTMLSelectElement>('.period-select');
-  if (select) select.value = f.period ?? 'last-12m';
+  updateMeta(activeSet.size, allPills.length);
+}
+
+function updateMeta(activeN: number, totalN: number) {
+  const meta = document.querySelector<HTMLElement>(META_SELECTOR);
+  if (!meta) return;
+  const lang = document.documentElement.lang.startsWith('zh') ? 'zh' : 'en';
+  const periodBtn = document.querySelector<HTMLButtonElement>('.period-btn.active');
+  const periodLabel = periodBtn?.textContent?.trim() ?? '';
+  meta.textContent = lang === 'zh'
+    ? `已选 ${activeN} / ${totalN} 家 · 期间 ${periodLabel}`
+    : `${activeN} OF ${totalN} ACTIVE · RANGE ${periodLabel}`;
 }
 
 function init() {
+  // Vendor pills — client-side toggle, URL replace (no reload)
   document.querySelectorAll<HTMLButtonElement>('.pill[data-vendor]').forEach((btn) => {
     btn.addEventListener('click', () => {
       const current = getFilters();
       const all = Array.from(document.querySelectorAll<HTMLButtonElement>('.pill[data-vendor]'))
         .map((b) => b.dataset.vendor!);
-      const currentSet = new Set(current.vendors ?? all);
+      const set = new Set(current.vendors ?? all);
       const id = btn.dataset.vendor!;
-      if (currentSet.has(id)) currentSet.delete(id);
-      else currentSet.add(id);
+      if (set.has(id)) set.delete(id);
+      else set.add(id);
       const next: Filters = {
         ...current,
-        vendors: currentSet.size === all.length ? null : Array.from(currentSet),
+        vendors: set.size === all.length ? null : Array.from(set),
       };
-      setFilters(next);
+      replaceUrl(next);
+      applyVendorVisibility(next);
     });
   });
 
+  // Select all / clear (no reload)
   document.querySelector('[data-action="select-all"]')?.addEventListener('click', () => {
-    setFilters({ ...getFilters(), vendors: null });
+    const next: Filters = { ...getFilters(), vendors: null };
+    replaceUrl(next);
+    applyVendorVisibility(next);
   });
   document.querySelector('[data-action="select-none"]')?.addEventListener('click', () => {
-    setFilters({ ...getFilters(), vendors: [] });
+    const next: Filters = { ...getFilters(), vendors: [] };
+    replaceUrl(next);
+    applyVendorVisibility(next);
   });
 
-  const select = document.querySelector<HTMLSelectElement>('.period-select');
-  select?.addEventListener('change', () => {
-    const v = select.value;
-    if (!isValidPeriod(v)) return;
-    const p = v as Period;
-    const next: Filters = { ...getFilters(), period: p === 'last-12m' ? null : p };
-    const qs = serializeFilters(next);
-    window.location.assign(`${window.location.pathname}${qs}${window.location.hash}`);
+  // Reset — clear all filters (full reload to re-render period)
+  document.querySelector('[data-action="reset"]')?.addEventListener('click', () => {
+    window.location.assign(window.location.pathname);
   });
 
-  applyFilters(getFilters());
+  // Period buttons — full reload with new period query
+  document.querySelectorAll<HTMLButtonElement>('.period-btn[data-v]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const v = btn.dataset.v!;
+      if (!isValidPeriod(v)) return;
+      const p = v as Period;
+      const next: Filters = { ...getFilters(), period: p === 'last-12m' ? null : p };
+      assign(next);
+    });
+  });
+
+  applyVendorVisibility(getFilters());
 }
 
 if (document.readyState === 'loading') {

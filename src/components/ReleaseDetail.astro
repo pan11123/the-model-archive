@@ -3,6 +3,7 @@ import type { Release, Vendor } from '@/lib/schemas';
 import type { Lang } from '@/lib/url';
 import { getDict } from '@/i18n';
 import { releaseAnchor } from '@/lib/slug';
+
 interface Props { releases: Release[]; vendors: Vendor[]; lang: Lang; }
 const { releases, vendors, lang } = Astro.props;
 const t = getDict(lang);

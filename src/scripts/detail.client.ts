@@ -5,9 +5,11 @@ type DialogItem = {
   vendorName: string; vendorColor: string; vendorWebsite: string;
 };
 
-declare global { interface Window {
-  __RL_DICT: { close: string; visit: string; vendor: string; model: string; date: string; link: string };
-} }
+declare global {
+  interface Window {
+    __RL_DICT: { close: string; visit: string; vendor: string; model: string; date: string; link: string };
+  }
+}
 
 const payloadEl = document.getElementById('release-payload');
 const dialog = document.getElementById('release-detail') as HTMLDialogElement | null;
@@ -25,15 +27,17 @@ function currentLang(): 'zh' | 'en' {
 
 function render(item: DialogItem) {
   const lang = currentLang();
+  const weekday = new Date(item.date).toLocaleDateString(lang === 'zh' ? 'zh-CN' : 'en-US', { weekday: 'long' });
   body.innerHTML = `
-    <header class="detail-head" style="--vendor-color:${item.vendorColor}">
-      <span class="detail-dot"></span>
-      <span class="detail-vendor">${item.vendorName}</span>
+    <header class="detail-head" style="--vc:${item.vendorColor}">
+      <span class="detail-label">${item.vendorName.toUpperCase()} · ${item.date}</span>
     </header>
     <h2 class="detail-model">${item.model}</h2>
-    <p class="detail-date mono">${item.date}</p>
+    <div class="detail-date">${weekday.toUpperCase()} · ${item.date}</div>
     <p class="detail-desc">${item.description[lang]}</p>
-    <a class="detail-link mono" href="${item.link}" target="_blank" rel="noreferrer noopener">${dict.visit} ↗</a>
+    <a class="detail-link" href="${item.link}" target="_blank" rel="noreferrer noopener" style="--vc:${item.vendorColor}">
+      ${dict.visit} →
+    </a>
   `;
 }
 

@@ -1,18 +1,24 @@
 ---
 import '@/styles/global.css';
 import '@/styles/components.css';
+import fs from 'node:fs';
+import path from 'node:path';
+
 import { loadAll } from '@/lib/loadData';
 import { filterByPeriod, type Period } from '@/lib/period';
 import { buildMatrix } from '@/lib/matrix';
 import { parseFilters } from '@/lib/url';
+import { countLastSevenDays, mostRecentDate } from '@/lib/stats';
 import type { Lang } from '@/i18n';
 import { getDict } from '@/i18n';
 
+import BgLayers from '@/components/BgLayers.astro';
 import StatusBar from '@/components/StatusBar.astro';
 import Hero from '@/components/Hero.astro';
 import FilterBar from '@/components/FilterBar.astro';
 import ReleaseTable from '@/components/ReleaseTable.astro';
 import ReleaseDetail from '@/components/ReleaseDetail.astro';
+import Footer from '@/components/Footer.astro';
 
 const { vendors, releases } = loadAll();
 
@@ -28,6 +34,21 @@ const matrix = buildMatrix(periodReleases, vendors, selectedVendorIds);
 const availableYears = Array.from(new Set(releases.map((r) => r.date.slice(0, 4))))
   .sort((a, b) => b.localeCompare(a));
 
+// Build-time computed stats
+const pkg = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'package.json'), 'utf-8'));
+const version = pkg.version as string;
+const buildDate = new Date().toISOString().slice(0, 10);
+const lastSevenDayCount = countLastSevenDays(releases);
+const mostRecent = mostRecentDate(releases);
+
+// Ticker: last 10 releases by date desc
+const recent = [...releases]
+  .sort((a, b) => (a.date < b.date ? 1 : -1))
+  .slice(0, 10);
+const vendorsById: Record<string, typeof vendors[number]> = Object.fromEntries(
+  vendors.map((v) => [v.id, v])
+);
+
 const t = getDict(lang);
 ---
 <!doctype html>
@@ -40,9 +61,24 @@ const t = getDict(lang);
     <link rel="icon" href="/the-model-archive/favicon.svg" />
   </head>
   <body>
-    <StatusBar lang={lang} version="0.0.1" buildDate="2026-04-23" totalReleases={releases.length} lastSevenDayCount={0} />
+    <BgLayers />
+    <StatusBar
+      lang={lang}
+      version={version}
+      buildDate={buildDate}
+      totalReleases={releases.length}
+      lastSevenDayCount={lastSevenDayCount}
+    />
     <main>
-      <Hero lang={lang} totalReleases={releases.length} totalVendors={vendors.length} />
+      <Hero
+        lang={lang}
+        totalReleases={releases.length}
+        totalVendors={vendors.length}
+        lastSevenDayCount={lastSevenDayCount}
+        mostRecentDate={mostRecent}
+        recent={recent}
+        vendorsById={vendorsById}
+      />
       <FilterBar
         vendors={vendors}
         selectedVendorIds={selectedVendorIds}
@@ -52,10 +88,10 @@ const t = getDict(lang);
       />
       <ReleaseTable matrix={matrix} lang={lang} />
     </main>
+    <Footer lang={lang} />
     <ReleaseDetail releases={releases} vendors={vendors} lang={lang} />
 
     <script is:inline>
-      // Client-side language auto-detection (only when no ?lang and no stored)
       (function () {
         var url = new URL(window.location.href);
         if (url.searchParams.has('lang')) return;

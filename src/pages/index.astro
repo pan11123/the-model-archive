@@ -91,22 +91,8 @@ const t = getDict(lang);
     <Footer lang={lang} />
     <ReleaseDetail releases={releases} vendors={vendors} lang={lang} />
 
-    <script is:inline>
-      (function () {
-        var url = new URL(window.location.href);
-        if (url.searchParams.has('lang')) return;
-        var stored = null;
-        try { stored = localStorage.getItem('the-model-archive:lang'); } catch (e) {}
-        var target = stored;
-        if (!target) {
-          var nav = (navigator.language || '').toLowerCase();
-          target = nav.indexOf('zh') === 0 ? 'zh' : 'en';
-        }
-        if (target !== 'zh' && target !== 'en') return;
-        if (document.documentElement.lang.slice(0, 2) === target) return;
-        url.searchParams.set('lang', target);
-        window.location.replace(url.toString());
-      })();
-    </script>
+    <script type="application/json" id="vendor-data" set:html={JSON.stringify(
+      Object.fromEntries(vendors.map(v => [v.id, { nameZh: v.name.zh, nameEn: v.name.en }]))
+    )}></script>
   </body>
 </html>

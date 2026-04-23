@@ -33,7 +33,7 @@ const vendorById = new Map(matrix.columns.map(v => [v.id, v]));
               <th class="col-vendor" data-vendor={v.id} style={`--vc: ${v.color};`}>
                 <div class="vcol">
                   <div class="swatch" aria-hidden="true"></div>
-                  <div class="name">{v.name[lang]}</div>
+                  <div class="name" data-name-zh={v.name.zh} data-name-en={v.name.en}>{v.name[lang]}</div>
                 </div>
               </th>
             ))}

@@ -17,7 +17,7 @@ const t = getDict(lang);
     <strong>TMA</strong> / V{version}
   </span>
   <span class="sb-sep">—</span>
-  <span class="sb-meta">
+  <span class="sb-meta" data-total={totalReleases} data-delta={lastSevenDayCount} data-date={buildDate}>
     {t.statusbar.sysPrefix} · {buildDate} UTC · {t.statusbar.entries(totalReleases)} · {t.statusbar.delta(lastSevenDayCount)}
   </span>
   <span></span>

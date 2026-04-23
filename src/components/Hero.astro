@@ -56,7 +56,7 @@ const tickerItems = [...recent, ...recent];
         return (
           <span class="item">
             <span class="date">{r.date}</span>
-            <span class="vendor">{v?.name[lang] ?? r.vendor}</span>
+            <span class="vendor" data-name-zh={v?.name.zh ?? r.vendor} data-name-en={v?.name.en ?? r.vendor}>{v?.name[lang] ?? r.vendor}</span>
             <span class="model">{r.model}</span>
           </span>
         );

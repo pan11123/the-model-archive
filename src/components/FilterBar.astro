@@ -45,7 +45,7 @@ const selectedCount = selectedVendorIds.size;
           aria-pressed={selectedVendorIds.has(v.id)}
         >
           <span class="bullet" aria-hidden="true"></span>
-          <span>{v.name[lang]}</span>
+          <span data-name-zh={v.name.zh} data-name-en={v.name.en}>{v.name[lang]}</span>
         </button>
       ))}
     </div>

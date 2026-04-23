@@ -166,6 +166,10 @@
   font-size: 10px;
   text-transform: uppercase;
   flex-shrink: 0;
+  background: var(--canvas);
+  padding-right: 14px;
+  position: relative;
+  z-index: 1;
 }
 .hero-ticker .feed {
   color: var(--text-dim);

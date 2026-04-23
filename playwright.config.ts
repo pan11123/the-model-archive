@@ -6,7 +6,7 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: 0,
   use: {
-    baseURL: 'http://localhost:4321/ai-release-log',
+    baseURL: 'http://localhost:4321/ai-release-log/',
     trace: 'on-first-retry',
   },
   webServer: {

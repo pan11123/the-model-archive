@@ -21,7 +21,6 @@ export const zh = {
   },
   filter: {
     heading: '查询',
-    subtitle: '构造筛选 · 写入 URL · 可分享',
     vendors: '厂商',
     period: '时段',
     all: '全选',

@@ -23,7 +23,6 @@ export const en: typeof zh = {
   },
   filter: {
     heading: 'Query',
-    subtitle: 'Compose · Syncs to URL · Shareable',
     vendors: 'Vendors',
     period: 'Period',
     all: 'SELECT ALL',

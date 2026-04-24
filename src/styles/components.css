@@ -407,7 +407,7 @@ table.release-table {
 }
 table.release-table thead th {
   position: sticky;
-  top: var(--statusbar-h);
+  top: 0;
   z-index: 5;
   background: var(--canvas-lift);
   padding: 14px 12px 13px;

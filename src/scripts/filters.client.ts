@@ -7,16 +7,21 @@ function getFilters(): Filters {
   return parseFilters(window.location.search);
 }
 
-function assign(next: Filters) {
-  const qs = serializeFilters(next);
-  const url = `${window.location.pathname}${qs}${window.location.hash}`;
-  window.location.assign(url);
-}
-
 function replaceUrl(next: Filters) {
   const qs = serializeFilters(next);
   const url = `${window.location.pathname}${qs}${window.location.hash}`;
   window.history.replaceState(null, '', url);
+}
+
+function dateMatchesPeriod(date: string, period: Period): boolean {
+  if (period === 'all') return true;
+  if (period === 'last-12m' || period === 'last-6m') {
+    const months = period === 'last-12m' ? 12 : 6;
+    const cutoff = new Date();
+    cutoff.setMonth(cutoff.getMonth() - months);
+    return new Date(date) >= cutoff;
+  }
+  return date.startsWith(`${period}-`);
 }
 
 function applyVendorVisibility(f: Filters) {
@@ -37,12 +42,25 @@ function applyVendorVisibility(f: Filters) {
     el.classList.toggle('hidden', !activeSet.has(el.dataset.vendor!));
   });
 
+  const period = f.period ?? 'last-12m';
   document.querySelectorAll<HTMLTableRowElement>('tr[data-date]').forEach((row) => {
+    const inPeriod = dateMatchesPeriod(row.dataset.date!, period as Period);
+    if (!inPeriod) {
+      row.classList.add('hidden');
+      return;
+    }
     const visible = row.querySelectorAll('td.col-vendor:not(.hidden) .chip');
     row.classList.toggle('hidden', visible.length === 0);
   });
 
   updateMeta(activeSet.size, allPills.length);
+}
+
+function updatePeriodButtons(f: Filters) {
+  const active = f.period ?? 'last-12m';
+  document.querySelectorAll<HTMLButtonElement>('.period-btn[data-v]').forEach((btn) => {
+    btn.classList.toggle('active', btn.dataset.v === active);
+  });
 }
 
 function updateMeta(activeN: number, totalN: number) {
@@ -88,19 +106,23 @@ function init() {
     applyVendorVisibility(next);
   });
 
-  // Reset — clear all filters (full reload to re-render period)
+  // Reset — clear all filters client-side
   document.querySelector('[data-action="reset"]')?.addEventListener('click', () => {
-    window.location.assign(window.location.pathname);
+    replaceUrl({ vendors: null, period: null, lang: null });
+    applyVendorVisibility({ vendors: null, period: null, lang: null });
+    updatePeriodButtons({ vendors: null, period: null, lang: null });
   });
 
-  // Period buttons — full reload with new period query
+  // Period buttons — client-side filter (no reload)
   document.querySelectorAll<HTMLButtonElement>('.period-btn[data-v]').forEach((btn) => {
     btn.addEventListener('click', () => {
       const v = btn.dataset.v!;
       if (!isValidPeriod(v)) return;
       const p = v as Period;
       const next: Filters = { ...getFilters(), period: p === 'last-12m' ? null : p };
-      assign(next);
+      replaceUrl(next);
+      updatePeriodButtons(next);
+      applyVendorVisibility(next);
     });
   });
 

@@ -5,7 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 import { loadAll } from '@/lib/loadData';
-import { filterByPeriod, type Period } from '@/lib/period';
+import { type Period } from '@/lib/period';
 import { buildMatrix } from '@/lib/matrix';
 import { parseFilters } from '@/lib/url';
 import { countLastSevenDays, mostRecentDate } from '@/lib/stats';
@@ -28,8 +28,7 @@ const period: Period = f.period ?? 'last-12m';
 
 const selectedVendorIds = new Set(f.vendors ?? vendors.map((v) => v.id));
 
-const periodReleases = filterByPeriod(releases, period);
-const matrix = buildMatrix(periodReleases, vendors, selectedVendorIds);
+const matrix = buildMatrix(releases, vendors, selectedVendorIds);
 
 const availableYears = Array.from(new Set(releases.map((r) => r.date.slice(0, 4))))
   .sort((a, b) => b.localeCompare(a));

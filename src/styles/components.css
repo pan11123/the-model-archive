@@ -75,7 +75,7 @@
 .hero-eyebrow {
   display: flex; align-items: center; gap: 14px;
   color: var(--plasma);
-  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase;
   margin-bottom: 32px;
   font-weight: 600;
 }
@@ -89,7 +89,7 @@
   font-size: var(--step-hero);
   line-height: 0.88;
   font-weight: 400;
-  font-variation-settings: "opsz" 144, "SOFT" 50, "WONK" 0;
+  font-variation-settings: var(--fvs-display-144);
   letter-spacing: -0.04em;
   color: var(--text);
   margin-bottom: 20px;
@@ -108,7 +108,9 @@
 }
 .hero-title .italic::after {
   content: "";
-  position: absolute; right: -0.2em; top: 0.1em; bottom: 0.25em;
+  position: absolute; right: -0.2em;
+  top: 0.08em;
+  bottom: 0.05em;
   width: 0.05em;
   background: var(--plasma);
   box-shadow: 0 0 24px var(--plasma-glow);
@@ -130,20 +132,20 @@
 .hero-meta {
   display: flex; gap: 32px;
   margin-top: 44px;
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 0.14em;
   color: var(--text-dim);
   text-transform: uppercase;
 }
-.hero-meta .kv { display: flex; flex-direction: column; gap: 4px; }
-.hero-meta .k { color: var(--text-faded); font-size: 10px; }
+.hero-meta .kv { display: flex; flex-direction: column; gap: 6px; }
+.hero-meta .k { color: var(--text-faded); font-size: 13px; }
 .hero-meta .v {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 26px;
+  font-size: 32px;
   color: var(--text);
   letter-spacing: -0.01em;
-  font-variation-settings: "opsz" 36, "SOFT" 50, "WONK" 0;
+  font-variation-settings: var(--fvs-display-36);
   text-transform: none;
   font-weight: 400;
 }
@@ -209,7 +211,7 @@
   font-size: 28px;
   font-weight: 400;
   color: var(--text);
-  font-variation-settings: "opsz" 36, "SOFT" 50, "WONK" 0;
+  font-variation-settings: var(--fvs-display-36);
 }
 .filter-heading .hmono {
   font-style: normal;
@@ -312,20 +314,24 @@
   display: flex;
   gap: 12px;
   margin-top: 14px;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--text-faded);
   letter-spacing: 0.08em;
   flex-wrap: wrap;
 }
-.pill-actions a {
+.pill-actions button[data-action] {
+  background: none;
+  border: none;
+  font: inherit;
   color: var(--text-dim);
   text-decoration: none;
   border-bottom: 1px dashed var(--border-hot);
+  padding: 0;
   padding-bottom: 1px;
   cursor: pointer;
   transition: color 0.15s;
 }
-.pill-actions a:hover { color: var(--plasma); border-color: var(--plasma); }
+.pill-actions button[data-action]:hover { color: var(--plasma); border-color: var(--plasma); }
 .pill-actions .meta {
   margin-left: auto;
   color: var(--text-faded);
@@ -356,7 +362,7 @@
   font-size: 28px;
   font-weight: 400;
   color: var(--text);
-  font-variation-settings: "opsz" 36, "SOFT" 50, "WONK" 0;
+  font-variation-settings: var(--fvs-display-36);
 }
 .matrix-head h2 .num {
   color: var(--plasma);
@@ -370,7 +376,7 @@
 .matrix-head .legend {
   display: flex;
   gap: 20px;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--text-faded);
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -416,6 +422,7 @@ table.release-table thead th {
 }
 table.release-table thead th.col-date {
   color: var(--text-faded);
+  font-size: 13px;
   width: 130px;
   position: sticky;
   left: 0;
@@ -563,7 +570,7 @@ span.empty {
   font-size: 28px;
   color: var(--text);
   font-weight: 400;
-  font-variation-settings: "opsz" 36, "SOFT" 50;
+  font-variation-settings: var(--fvs-display-36);
   line-height: 1;
   margin: 0;
 }

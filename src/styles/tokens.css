@@ -34,7 +34,8 @@
   /* Fonts */
   --font-display: 'Fraunces', 'Source Serif 4', ui-serif, Georgia, serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
-  --font-sans: 'Fraunces', ui-sans-serif, system-ui, sans-serif;
+  --fvs-display-144: "opsz" 144, "SOFT" 50, "WONK" 0;
+  --fvs-display-36: "opsz" 36, "SOFT" 50, "WONK" 0;
 
   /* Type scale */
   --step-0: clamp(0.875rem, 0.82rem + 0.25vw, 1rem);

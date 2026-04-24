@@ -14,6 +14,8 @@
   font-display: swap;
   src: url('/the-model-archive/fonts/Fraunces.woff2') format('woff2-variations');
 }
+/* Note: SOFT and WONK axes may not exist in the current font binary.
+   font-variation-settings referencing them will silently be ignored by the browser. */
 @font-face {
   font-family: 'JetBrains Mono';
   font-style: normal;

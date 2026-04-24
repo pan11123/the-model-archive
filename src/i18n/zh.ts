@@ -4,10 +4,9 @@ export const zh = {
   hero: {
     line1: 'The Model',
     line2: 'Archive',
-    tagline: '头部厂商大语言模型发布时间线 · 人工整理',
-    eyebrow: '模型档案 · 第 001 期',
+    eyebrow: '模型档案',
     eyebrowSub: '大语言模型发布档案',
-    subDescription: '追踪全球主要 AI 厂商的模型发布节奏。<strong>横向对比</strong>谁在什么时刻推送了什么模型,<strong>纵向查看</strong>任一家厂商的发布脉络。数据手工校阅,每日更新。',
+    subDescription: '追踪全球主要 AI 厂商的模型发布节奏。',
     kv: {
       vendors: '收录厂商',
       totalReleases: '总发布数',
@@ -20,10 +19,8 @@ export const zh = {
     entries: (n: number) => `${n} 条发布`,
     delta: (n: number) => `Δ7D+${n}`,
   },
-  ticker: { tag: 'LIVE_FEED ▸' },
   filter: {
     heading: '查询',
-    headingMono: '// QUERY',
     subtitle: '构造筛选 · 写入 URL · 可分享',
     vendors: '厂商',
     period: '时段',

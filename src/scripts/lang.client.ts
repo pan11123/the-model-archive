@@ -38,11 +38,10 @@ const STATIC_TEXT: Array<{ sel: string; fn: (d: Dict) => string; html?: boolean 
   { sel: '.hero-meta .kv:nth-child(3) .k', fn: d => d.hero.kv.last7Days },
   { sel: '.hero-meta .kv:nth-child(4) .k', fn: d => d.hero.kv.mostRecent },
   // Filter
-  { sel: '.filter-heading h2', fn: d => `${d.filter.heading} `, html: true, selOverride: '.filter-heading h2' },
   { sel: '.filter-heading .dim', fn: d => d.filter.subtitle },
-  { sel: 'a[data-action="select-all"]', fn: d => `⊕ ${d.filter.all}` },
-  { sel: 'a[data-action="select-none"]', fn: d => `⊖ ${d.filter.none}` },
-  { sel: 'a[data-action="reset"]', fn: d => `⟳ ${d.filter.reset}` },
+  { sel: 'button[data-action="select-all"]', fn: d => `⊕ ${d.filter.all}` },
+  { sel: 'button[data-action="select-none"]', fn: d => `⊖ ${d.filter.none}` },
+  { sel: 'button[data-action="reset"]', fn: d => `⟳ ${d.filter.reset}` },
   // Matrix
   { sel: '.matrix-head .legend span:nth-child(1)', fn: d => `— ${d.matrix.legendEmpty}` },
   { sel: '.matrix-head .legend span:nth-child(2)', fn: d => `● ${d.matrix.legendActive}` },
@@ -75,7 +74,7 @@ function updateStatusbarMeta(d: Dict) {
 function updateFilterHeading(d: Dict) {
   const h2 = document.querySelector('.filter-heading h2');
   if (h2) {
-    h2.innerHTML = `${d.filter.heading} <span class="hmono">${d.filter.headingMono}</span>`;
+    h2.textContent = d.filter.heading;
   }
 }
 

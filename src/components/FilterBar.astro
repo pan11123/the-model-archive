@@ -27,7 +27,7 @@ const selectedCount = selectedVendorIds.size;
 ---
 <section class="filter" data-initial-period={period}>
   <div class="filter-heading">
-    <h2>{t.filter.heading} <span class="hmono">{t.filter.headingMono}</span></h2>
+    <h2>{t.filter.heading}</h2>
     <span class="dim">{t.filter.subtitle}</span>
   </div>
 
@@ -67,9 +67,9 @@ const selectedCount = selectedVendorIds.size;
   </div>
 
   <div class="pill-actions">
-    <a data-action="select-all">⊕ {t.filter.all}</a>
-    <a data-action="select-none">⊖ {t.filter.none}</a>
-    <a data-action="reset">⟳ {t.filter.reset}</a>
+    <button type="button" data-action="select-all">⊕ {t.filter.all}</button>
+    <button type="button" data-action="select-none">⊖ {t.filter.none}</button>
+    <button type="button" data-action="reset">⟳ {t.filter.reset}</button>
     <span class="meta" data-role="meta">{t.filter.selectedMeta(selectedCount, vendors.length, currentPeriodLabel)}</span>
   </div>
 </section>

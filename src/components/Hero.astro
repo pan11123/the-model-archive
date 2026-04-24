@@ -48,6 +48,7 @@ const tickerItems = [...recent, ...recent];
     </div>
   </div>
 
+  {recent.length > 0 && (
   <div class="hero-ticker">
     <span class="feed">
       {tickerItems.map((r) => {
@@ -62,4 +63,5 @@ const tickerItems = [...recent, ...recent];
       })}
     </span>
   </div>
+  )}
 </section>

@@ -6,10 +6,9 @@ export const en: typeof zh = {
   hero: {
     line1: 'The Model',
     line2: 'Archive',
-    tagline: 'Curated release timeline for leading LLM vendors',
-    eyebrow: 'ARCHIVE № 001',
+    eyebrow: 'ARCHIVE',
     eyebrowSub: 'ARCHIVE OF LLM RELEASES',
-    subDescription: 'Tracking the release cadence of every major AI vendor. <strong>Compare horizontally</strong> who shipped what when, <strong>read vertically</strong> any single vendor\'s release lineage. Hand-curated, updated daily.',
+    subDescription: 'Tracking the release cadence of every major AI vendor.',
     kv: {
       vendors: 'VENDORS',
       totalReleases: 'TOTAL RELEASES',
@@ -22,10 +21,8 @@ export const en: typeof zh = {
     entries: (n: number) => `${n} ENTRIES`,
     delta: (n: number) => `Δ7D+${n}`,
   },
-  ticker: { tag: 'LIVE_FEED ▸' },
   filter: {
     heading: 'Query',
-    headingMono: '// SEARCH',
     subtitle: 'Compose · Syncs to URL · Shareable',
     vendors: 'Vendors',
     period: 'Period',

@@ -1,5 +1,5 @@
 .claude/
-
+imgs/
 # build output
 dist/
 # generated types

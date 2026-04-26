@@ -31,11 +31,12 @@ The path alias `@` resolves to `src/` and is configured in `astro.config.mjs`, `
 
 ### Data flow (build time)
 
-1. `src/data/vendors.yaml` and `src/data/releases.yaml` are the only sources of truth.
+1. `src/data/vendors.yaml` and the per-vendor files under `src/data/releases/` are the only sources of truth. Each file in `releases/` is named after a vendor id (e.g. `releases/openai.yaml`) and contains only releases for that vendor.
 2. `src/lib/loadData.ts#loadAll()` reads them, parses through Zod schemas (`src/lib/schemas.ts`), then runs `crossValidate` (`src/lib/crossValidate.ts`) which enforces:
    - every release's `vendor` matches an existing `vendors.yaml#id`
    - no duplicate `(vendor, model, date)` triples
    - no release dated more than 90 days in the future
+   - the set of `*.yaml` files under `src/data/releases/` exactly equals the set of `id`s in `vendors.yaml`, and every entry's `vendor` field equals its filename
    A validation failure throws and breaks the build — this is intentional; CI relies on it.
 3. `src/pages/index.astro` calls `loadAll()`, parses URL search params via `parseFilters()`, builds the date×vendor matrix via `buildMatrix()`, and renders SSG output. There is exactly one page.
 
@@ -54,7 +55,7 @@ Dictionaries live in `src/i18n/zh.ts` and `src/i18n/en.ts`; `getDict(lang)` sele
 
 ### Adding a release
 
-Edit `src/data/releases.yaml`. Required fields: `date` (YYYY-MM-DD), `vendor` (must match a `vendors.yaml#id`), `model`, `description.zh`, `description.en`, `link` (https URL). `crossValidate` will reject orphan vendor refs, duplicates, and far-future dates at build time.
+Edit `src/data/releases/<vendor-id>.yaml` and append a new entry at the end (each file is sorted by `date` ascending). Required fields: `date` (YYYY-MM-DD), `vendor` (must equal the filename), `model`, `description.zh`, `description.en`, `link` (https URL). When adding a new vendor, add it to `vendors.yaml` and create `src/data/releases/<vendor-id>.yaml` (use `[]` if there are no releases yet) — `crossValidate` rejects vendor-id mismatches, filename mismatches, missing release files, duplicates, and far-future dates at build time.
 
 ### Deploy
 

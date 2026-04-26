@@ -4,10 +4,10 @@ A curated archive of LLM releases from every major AI vendor. Bilingual (zh / en
 
 ## Add a release
 
-Edit `src/data/releases.yaml` and submit a PR. Fields:
+Edit `src/data/releases/<vendor>.yaml` (one file per vendor; create the file by adding the vendor to `src/data/vendors.yaml` first if it does not exist) and submit a PR. Append new entries at the end — each file is sorted by date ascending. Fields:
 
 - `date`: ISO 8601 (YYYY-MM-DD)
-- `vendor`: must match an `id` in `src/data/vendors.yaml`
+- `vendor`: must match the filename and an `id` in `src/data/vendors.yaml`
 - `model`: display string
 - `description.zh` / `description.en`: one-line
 - `link`: official announcement URL (must be https)

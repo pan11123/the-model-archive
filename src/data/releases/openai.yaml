@@ -21,7 +21,7 @@
   link: https://openai.com/index/gpt-4-research/
 - date: '2023-06-13'
   vendor: openai
-  model: GPT-4-0613 / Function Calling
+  model: GPT-4-0613
   description:
     zh: API 模型更可控,引入 function calling、更长上下文与更低价格。
     en: More steerable API models with function calling, longer context, and lower prices.

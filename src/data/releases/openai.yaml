@@ -1,0 +1,168 @@
+- date: '2022-11-30'
+  vendor: openai
+  model: GPT-3.5 / ChatGPT
+  description:
+    zh: ChatGPT 发布,以对话形式交互,可承接追问、承认错误、拒绝不当请求。
+    en: ChatGPT launched; conversational model that handles follow-ups, admits mistakes, and refuses improper requests.
+  link: https://openai.com/index/chatgpt/
+- date: '2023-03-01'
+  vendor: openai
+  model: GPT-3.5 Turbo
+  description:
+    zh: GPT-3.5 Turbo 与 Whisper 模型上线 API,开发者可直接集成。
+    en: GPT-3.5 Turbo and Whisper made available via API for developers.
+  link: https://openai.com/index/introducing-chatgpt-and-whisper-apis/
+- date: '2023-03-14'
+  vendor: openai
+  model: GPT-4
+  description:
+    zh: 大型多模态模型,在多项专业与学术基准上达到人类水平。
+    en: Large multimodal model with human-level performance on many professional and academic benchmarks.
+  link: https://openai.com/index/gpt-4-research/
+- date: '2023-06-13'
+  vendor: openai
+  model: GPT-4-0613 / Function Calling
+  description:
+    zh: API 模型更可控,引入 function calling、更长上下文与更低价格。
+    en: More steerable API models with function calling, longer context, and lower prices.
+  link: https://openai.com/index/function-calling-and-other-api-updates/
+- date: '2023-11-06'
+  vendor: openai
+  model: GPT-4 Turbo
+  description:
+    zh: 128K 上下文、价格更低,DevDay 同步推出 Assistants API、Vision 与 DALL·E 3 API。
+    en: 128K context at lower prices; DevDay also brings Assistants API, Vision, and DALL·E 3 API.
+  link: https://openai.com/index/new-models-and-developer-products-announced-at-devday/
+- date: '2024-05-13'
+  vendor: openai
+  model: GPT-4o
+  description:
+    zh: 旗舰多模态 Omni,实时跨音频、视觉、文本推理。
+    en: Flagship Omni model reasoning across audio, vision, and text in real time.
+  link: https://openai.com/index/hello-gpt-4o/
+- date: '2024-09-12'
+  vendor: openai
+  model: OpenAI o1-preview / o1-mini
+  description:
+    zh: 推理系列首个预览,回答前进行思维链推理,擅长数学、科学与编程。
+    en: First preview of OpenAI's reasoning series; models think before responding, strong on math, science, and coding.
+  link: https://openai.com/index/introducing-openai-o1-preview/
+- date: '2024-12-05'
+  vendor: openai
+  model: OpenAI o1
+  description:
+    zh: 推理模型 o1 正式版发布,深度思考能力进一步增强,同步公开 System Card。
+    en: Full o1 reasoning model release with deeper deliberation; System Card published alongside.
+  link: https://openai.com/index/openai-o1-system-card/
+- date: '2025-01-31'
+  vendor: openai
+  model: OpenAI o3-mini
+  description:
+    zh: 推理模型小型版,在成本与能力之间推进新前沿。
+    en: Pushing the frontier of cost-effective reasoning.
+  link: https://openai.com/index/openai-o3-mini/
+- date: '2025-02-27'
+  vendor: openai
+  model: GPT-4.5 Preview
+  description:
+    zh: 迄今规模最大、对话能力最强的预览版,预训练与后训练进一步扩展。
+    en: Research preview of OpenAI's largest, best chat model; scaled-up pre- and post-training.
+  link: https://openai.com/index/introducing-gpt-4-5/
+- date: '2025-04-14'
+  vendor: openai
+  model: GPT-4.1 / GPT-4.1 mini / GPT-4.1 nano
+  description:
+    zh: API 全新模型族,编程、指令跟随、长上下文均大幅提升;首发 nano 版。
+    en: New API model family with major gains in coding, instruction following, and long context; first nano release.
+  link: https://openai.com/index/gpt-4-1/
+- date: '2025-04-16'
+  vendor: openai
+  model: OpenAI o3 / o4-mini
+  description:
+    zh: 当前最聪明的推理模型组合,具备完整工具调用能力。
+    en: Smartest and most capable reasoning models to date with full tool access.
+  link: https://openai.com/index/introducing-o3-and-o4-mini/
+- date: '2025-06-10'
+  vendor: openai
+  model: OpenAI o3-pro
+  description:
+    zh: o3 的强化版,在科学、教育、编程、商业、写作等领域均显著领先。
+    en: o3-pro outperforms o3 across science, education, programming, business, and writing.
+  link: https://help.openai.com/en/articles/9624314-model-release-notes
+- date: '2025-08-07'
+  vendor: openai
+  model: GPT-5
+  description:
+    zh: 旗舰新一代,在编程、数学、写作、健康与视觉等任务上全面 SOTA。
+    en: Flagship next-gen with SOTA performance across coding, math, writing, health, and vision.
+  link: https://openai.com/index/introducing-gpt-5/
+- date: '2025-11-12'
+  vendor: openai
+  model: GPT-5.1
+  description:
+    zh: GPT-5 系列升级,模型更"温暖"、能力更强,新增 ChatGPT 语气风格定制。
+    en: Warmer, more capable GPT-5 upgrade with new tone and style customization in ChatGPT.
+  link: https://openai.com/index/gpt-5-1/
+- date: '2025-11-19'
+  vendor: openai
+  model: GPT-5.1-Codex-Max
+  description:
+    zh: Codex 更智能的 agentic 编程模型,胜任长时、项目级任务。
+    en: Smarter, faster agentic coding model for long-running, project-scale work in Codex.
+  link: https://openai.com/index/gpt-5-1-codex-max/
+- date: '2025-12-11'
+  vendor: openai
+  model: GPT-5.2
+  description:
+    zh: 面向日常专业工作的前沿模型,推理、长上下文、编程与视觉全面 SOTA。
+    en: Advanced frontier model for daily professional work; SOTA reasoning, long-context, coding, and vision.
+  link: https://openai.com/index/introducing-gpt-5-2/
+- date: '2025-12-18'
+  vendor: openai
+  model: GPT-5.2-Codex
+  description:
+    zh: 最强编程模型,支持长程推理、大规模代码改造与网络安全能力提升。
+    en: Most advanced coding model with long-horizon reasoning, large-scale code transformations, and cybersecurity gains.
+  link: https://openai.com/index/introducing-gpt-5-2-codex/
+- date: '2026-02-05'
+  vendor: openai
+  model: GPT-5.3-Codex
+  description:
+    zh: Codex 原生 agent,前沿编程能力叠加通用推理,胜任长程技术工作。
+    en: Codex-native agent pairing frontier coding with general reasoning for long-horizon technical work.
+  link: https://openai.com/index/introducing-gpt-5-3-codex/
+- date: '2026-02-12'
+  vendor: openai
+  model: GPT-5.3-Codex-Spark
+  description:
+    zh: 首个实时编程模型,生成速度提升 15 倍,128K 上下文。
+    en: First real-time coding model with 15x faster generation and 128K context.
+  link: https://openai.com/index/introducing-gpt-5-3-codex-spark/
+- date: '2026-03-03'
+  vendor: openai
+  model: GPT-5.3 Instant
+  description:
+    zh: 日常对话体验优化,语气更顺畅、回应更实用。
+    en: Smoother, more useful everyday conversations.
+  link: https://openai.com/index/gpt-5-3-instant/
+- date: '2026-03-05'
+  vendor: openai
+  model: GPT-5.4
+  description:
+    zh: 旗舰前沿模型,1M 上下文 + 计算机操作 + 工具检索全面升级。
+    en: Frontier flagship with SOTA coding, computer use, tool search, and 1M-token context.
+  link: https://openai.com/index/introducing-gpt-5-4/
+- date: '2026-03-17'
+  vendor: openai
+  model: GPT-5.4 mini / GPT-5.4 nano
+  description:
+    zh: GPT-5.4 的精简版,针对编程、工具调用与高吞吐 API 场景优化。
+    en: Smaller, faster GPT-5.4 variants tuned for coding, tool use, and high-volume API workloads.
+  link: https://openai.com/index/introducing-gpt-5-4-mini-and-nano/
+- date: '2026-04-23'
+  vendor: openai
+  model: GPT-5.5
+  description:
+    zh: 迄今最聪明的模型,编程、研究与跨工具数据分析能力进一步强化。
+    en: Smartest model yet, with stronger coding, research, and cross-tool data analysis.
+  link: https://openai.com/index/introducing-gpt-5-5/

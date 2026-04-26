@@ -1,0 +1,105 @@
+- date: '2023-03-14'
+  vendor: anthropic
+  model: Claude / Claude Instant
+  description:
+    zh: Anthropic 首次发布 Claude 及轻量版 Claude Instant,通过 API 和聊天界面提供对话与文本处理能力。
+    en: Anthropic launches Claude and the lighter Claude Instant, offering conversational and text processing via API and chat interface.
+  link: https://www.anthropic.com/news/introducing-claude
+- date: '2023-07-11'
+  vendor: anthropic
+  model: Claude 2
+  description:
+    zh: Claude 2 发布,支持 100K 上下文,编程与数学能力显著提升,同步上线 claude.ai 公测版。
+    en: Claude 2 ships with a 100K context window, major gains in coding and math, and a new public beta at claude.ai.
+  link: https://www.anthropic.com/news/claude-2
+- date: '2023-11-21'
+  vendor: anthropic
+  model: Claude 2.1
+  description:
+    zh: Claude 2.1 将上下文窗口扩展至 200K token,幻觉率降低一半,新增系统提示与工具调用功能。
+    en: Claude 2.1 extends the context window to 200K tokens, halves hallucination rates, and introduces system prompts and tool use.
+  link: https://www.anthropic.com/news/claude-2-1
+- date: '2024-03-04'
+  vendor: anthropic
+  model: Claude 3 family
+  description:
+    zh: Claude 3 模型家族发布,包含 Haiku、Sonnet 和 Opus 三档,在多项基准测试中刷新业界纪录。
+    en: The Claude 3 family launches with Haiku, Sonnet, and Opus, setting new benchmarks across a wide range of cognitive tasks.
+  link: https://www.anthropic.com/news/claude-3-family
+- date: '2024-06-21'
+  vendor: anthropic
+  model: Claude 3.5 Sonnet
+  description:
+    zh: Claude 3.5 Sonnet 在速度与成本等同于 Sonnet 的同时,多项评测超越 Claude 3 Opus,并推出 Artifacts 协作功能。
+    en: Claude 3.5 Sonnet outperforms Claude 3 Opus on key benchmarks at twice the speed, and introduces the Artifacts collaborative workspace.
+  link: https://www.anthropic.com/news/claude-3-5-sonnet
+- date: '2024-10-22'
+  vendor: anthropic
+  model: Claude 3.5 Sonnet (new) / Claude 3.5 Haiku
+  description:
+    zh: 升级版 Claude 3.5 Sonnet 与全新 Claude 3.5 Haiku 发布,同步推出计算机操作公测功能。
+    en: Upgraded Claude 3.5 Sonnet and new Claude 3.5 Haiku released alongside a public beta for computer use.
+  link: https://www.anthropic.com/news/3-5-models-and-computer-use
+- date: '2025-02-24'
+  vendor: anthropic
+  model: Claude 3.7 Sonnet
+  description:
+    zh: Anthropic 首款混合推理模型,同时推出命令行编程工具 Claude Code。
+    en: Anthropic's first hybrid reasoning model, launched together with the Claude Code command-line coding tool.
+  link: https://www.anthropic.com/news/claude-3-7-sonnet
+- date: '2025-05-22'
+  vendor: anthropic
+  model: Claude Opus 4 / Claude Sonnet 4
+  description:
+    zh: 下一代 Claude 模型,Claude Code 正式发布,新增扩展思维工具调用与并行工具执行等能力。
+    en: Next-generation Claude models with Claude Code GA, extended thinking with tool use, and parallel tool execution.
+  link: https://www.anthropic.com/news/claude-4
+- date: '2025-08-05'
+  vendor: anthropic
+  model: Claude Opus 4.1
+  description:
+    zh: Opus 4 的升级版,智能体编码、真实世界编程与推理能力显著提升。
+    en: Upgraded Opus 4 with significant gains in agentic coding, real-world programming, and reasoning.
+  link: https://www.anthropic.com/news/claude-opus-4-1
+- date: '2025-09-29'
+  vendor: anthropic
+  model: Claude Sonnet 4.5
+  description:
+    zh: 全球最强编程模型,计算机操作与智能体构建能力大幅提升,同步推出 Claude Agent SDK。
+    en: World's best coding model with major leaps in computer use and agent building, alongside the Claude Agent SDK.
+  link: https://www.anthropic.com/news/claude-sonnet-4-5
+- date: '2025-10-15'
+  vendor: anthropic
+  model: Claude Haiku 4.5
+  description:
+    zh: 轻量模型升级,编程能力接近五个月前的 Sonnet 4,成本仅为其三分之一且速度提升一倍以上。
+    en: Lightweight model upgrade delivering near-Sonnet 4 coding performance at one-third the cost and over twice the speed.
+  link: https://www.anthropic.com/news/claude-haiku-4-5
+- date: '2025-11-24'
+  vendor: anthropic
+  model: Claude Opus 4.5
+  description:
+    zh: 旗舰模型全面升级,编程、智能体与计算机操作均为业界最佳,Token 用量大幅降低。
+    en: Frontier flagship model with state-of-the-art coding, agents, and computer use, alongside dramatically improved token efficiency.
+  link: https://www.anthropic.com/news/claude-opus-4-5
+- date: '2026-02-05'
+  vendor: anthropic
+  model: Claude Opus 4.6
+  description:
+    zh: 最强模型升级,智能体编程与计算机操作行业领先,首次为 Opus 级模型引入 1M 上下文窗口。
+    en: Industry-leading model for agentic coding and computer use, with a first-ever 1M-token context window for the Opus tier.
+  link: https://www.anthropic.com/news/claude-opus-4-6
+- date: '2026-02-17'
+  vendor: anthropic
+  model: Claude Sonnet 4.6
+  description:
+    zh: Sonnet 系列最强型号,编程、计算机操作、长程推理与设计能力全面升级,具备 1M 上下文窗口。
+    en: Most capable Sonnet yet with full upgrades across coding, computer use, long-context reasoning, and design, plus a 1M-token context window.
+  link: https://www.anthropic.com/news/claude-sonnet-4-6
+- date: '2026-04-16'
+  vendor: anthropic
+  model: Claude Opus 4.7
+  description:
+    zh: 高级软件工程能力显著提升,视觉分辨率与指令遵从全面增强,支持 xhigh 努力级别。
+    en: Notable improvement in advanced software engineering with substantially better vision, instruction following, and a new xhigh effort level.
+  link: https://www.anthropic.com/news/claude-opus-4-7

@@ -5,15 +5,11 @@ import { vendorsFileSchema, releasesFileSchema, type Vendor, type Release } from
 import { crossValidate } from '@/lib/crossValidate';
 
 const DATA_DIR = path.resolve(process.cwd(), 'src/data');
+const RELEASES_DIR = path.join(DATA_DIR, 'releases');
 
 export function loadVendors(): Vendor[] {
   const raw = fs.readFileSync(path.join(DATA_DIR, 'vendors.yaml'), 'utf-8');
   return vendorsFileSchema.parse(yaml.load(raw));
-}
-
-export function loadReleases(): Release[] {
-  const raw = fs.readFileSync(path.join(DATA_DIR, 'releases.yaml'), 'utf-8');
-  return releasesFileSchema.parse(yaml.load(raw));
 }
 
 export function loadReleasesFromDir(dir: string): { releases: Release[]; fileIds: string[] } {
@@ -40,9 +36,13 @@ export function loadReleasesFromDir(dir: string): { releases: Release[]; fileIds
   return { releases, fileIds };
 }
 
+export function loadReleases(): Release[] {
+  return loadReleasesFromDir(RELEASES_DIR).releases;
+}
+
 export function loadAll(): { vendors: Vendor[]; releases: Release[] } {
   const vendors = loadVendors();
-  const releases = loadReleases();
-  crossValidate(vendors, releases);
+  const { releases, fileIds } = loadReleasesFromDir(RELEASES_DIR);
+  crossValidate(vendors, releases, fileIds);
   return { vendors, releases };
 }

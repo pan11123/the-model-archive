@@ -35,4 +35,24 @@ describe('crossValidate', () => {
     ];
     expect(() => crossValidate(vendors, releases)).toThrow(/future/i);
   });
+
+  it('rejects a release file whose name is not a known vendor', () => {
+    expect(() => crossValidate(vendors, [], ['openai', 'mystery'])).toThrow(
+      /releases\/mystery\.yaml.*not in vendors\.yaml/i,
+    );
+  });
+
+  it('rejects a vendor that has no release file', () => {
+    const twoVendors: Vendor[] = [
+      ...vendors,
+      { id: 'anthropic', name: { zh: 'A', en: 'A' }, color: '#cc785c', website: 'https://anthropic.com' },
+    ];
+    expect(() => crossValidate(twoVendors, [], ['openai'])).toThrow(
+      /vendor "anthropic".*has no release file/i,
+    );
+  });
+
+  it('passes when file ids equal vendor ids', () => {
+    expect(() => crossValidate(vendors, [], ['openai'])).not.toThrow();
+  });
 });

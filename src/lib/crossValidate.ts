@@ -1,7 +1,26 @@
 import type { Vendor, Release } from '@/lib/schemas';
 
-export function crossValidate(vendors: Vendor[], releases: Release[]): void {
+export function crossValidate(
+  vendors: Vendor[],
+  releases: Release[],
+  releaseFileIds?: string[],
+): void {
   const vendorIds = new Set(vendors.map((v) => v.id));
+
+  if (releaseFileIds !== undefined) {
+    const fileIdSet = new Set(releaseFileIds);
+    for (const id of fileIdSet) {
+      if (!vendorIds.has(id)) {
+        throw new Error(`releases/${id}.yaml is not in vendors.yaml`);
+      }
+    }
+    for (const id of vendorIds) {
+      if (!fileIdSet.has(id)) {
+        throw new Error(`vendor "${id}" has no release file at releases/${id}.yaml`);
+      }
+    }
+  }
+
   const seen = new Set<string>();
   const today = new Date();
   const cutoff = new Date(today);

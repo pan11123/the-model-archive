@@ -1,0 +1,14 @@
+- date: 2024-06-20
+  vendor: anthropic
+  model: Claude 3.5 Sonnet
+  description:
+    zh: 更强更快。
+    en: Smarter, faster.
+  link: https://www.anthropic.com/news/claude-3-5-sonnet
+- date: 2024-03-04
+  vendor: anthropic
+  model: Claude 3
+  description:
+    zh: 三件套。
+    en: Family of three.
+  link: https://www.anthropic.com/news/claude-3-family

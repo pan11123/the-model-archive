@@ -1,0 +1,7 @@
+- date: 2024-05-13
+  vendor: openai
+  model: GPT-4o
+  description:
+    zh: 全模态。
+    en: Omnimodal.
+  link: https://openai.com/index/hello-gpt-4o/

@@ -1,1 +1,96 @@
-[]
+- date: '2023-11-03'
+  vendor: xai
+  model: Grok
+  description:
+    zh: xAI 首款大语言模型,集成 𝕏 平台实时信息,兼具幽默与叛逆。
+    en: xAI's debut LLM with real-time 𝕏 platform knowledge, wit, and a rebellious
+      streak.
+  link: https://x.ai/news/grok
+- date: '2024-03-17'
+  vendor: xai
+  model: Grok-1 Open Release
+  description:
+    zh: 以 Apache 2.0 许可开源 Grok-1 基座模型,3140 亿参数混合专家架构。
+    en: Open-sourced Grok-1 base model under Apache 2.0; 314B-parameter Mixture-of-Experts
+      architecture.
+  link: https://x.ai/news/grok-os
+- date: '2024-03-28'
+  vendor: xai
+  model: Grok-1.5
+  description:
+    zh: 支持 128K 长上下文,数学与代码能力大幅提升。
+    en: 128K long-context support with major gains in math and coding benchmarks.
+  link: https://x.ai/news/grok-1.5
+- date: '2024-04-12'
+  vendor: xai
+  model: Grok-1.5V
+  description:
+    zh: 首个多模态模型,支持文档、图表、截图与照片理解,发布 RealWorldQA 基准。
+    en: First multimodal model handling documents, diagrams, charts, and photos; introduced
+      RealWorldQA benchmark.
+  link: https://x.ai/news/grok-1.5v
+- date: '2024-08-13'
+  vendor: xai
+  model: Grok-2 / Grok-2 mini Beta
+  description:
+    zh: 对话、编程与推理能力跃升,在 LMSYS 排行榜超越 GPT-4-Turbo 与 Claude 3.5 Sonnet。
+    en: Frontier leap in chat, coding, and reasoning; outperformed GPT-4-Turbo and
+      Claude 3.5 Sonnet on LMSYS.
+  link: https://x.ai/news/grok-2
+- date: '2025-02-19'
+  vendor: xai
+  model: Grok 3 Beta
+  description:
+    zh: 基于 Colossus 超级集群训练,百万 token 上下文,大规模强化学习驱动推理,发布 DeepSearch
+      智能体。
+    en: Trained on Colossus with 10× compute; 1M-token context, RL-driven reasoning,
+      and DeepSearch agent.
+  link: https://x.ai/news/grok-3
+- date: '2025-07-09'
+  vendor: xai
+  model: Grok 4
+  description:
+    zh: 在 20 万 GPU 集群上规模化强化学习,原生工具使用,Grok 4 Heavy 首次突破 Humanity's
+      Last Exam 50%。
+    en: Scaled RL on 200K-GPU Colossus; native tool use; Grok 4 Heavy first to surpass
+      50% on Humanity's Last Exam.
+  link: https://x.ai/news/grok-4
+- date: '2025-08-23'
+  vendor: xai
+  model: Grok 2.5 Open Release
+  description:
+    zh: xAI 开源 Grok 2.5 模型。
+    en: xAI open-sources Grok 2.5.
+  link: https://www.reuters.com/technology/musk-says-xai-open-sources-grok-25-2025-08-23/
+- date: '2025-08-28'
+  vendor: xai
+  model: Grok Code Fast 1
+  description:
+    zh: 专为智能体编程打造,新架构,SWE-Bench-Verified 70.8%,首发于 GitHub Copilot、Cursor
+      等平台。
+    en: Purpose-built for agentic coding; new architecture, 70.8% SWE-Bench-Verified;
+      launched on GitHub Copilot, Cursor, and more.
+  link: https://x.ai/news/grok-code-fast-1
+- date: '2025-09-19'
+  vendor: xai
+  model: Grok 4 Fast
+  description:
+    zh: 高性价比推理模型,思维 token 减少 40%,200 万上下文,统一推理/非推理架构。
+    en: Cost-efficient reasoning with 40% fewer thinking tokens; 2M context; unified
+      reasoning/non-reasoning architecture.
+  link: https://x.ai/news/grok-4-fast
+- date: '2025-11-17'
+  vendor: xai
+  model: Grok 4.1
+  description:
+    zh: 性格、创造力与情感智能大幅提升,LMArena 文本榜第一,幻觉率显著降低。
+    en: Major gains in personality, creativity, and emotional intelligence; LMArena
+      Text #1; reduced hallucinations.
+  link: https://x.ai/news/grok-4-1
+- date: '2025-11-19'
+  vendor: xai
+  model: Grok 4.1 Fast
+  description:
+    zh: 最佳工具调用模型,200 万上下文,同步发布 Agent Tools API。
+    en: Best-in-class tool calling; 2M context; launched alongside Agent Tools API.
+  link: https://x.ai/news/grok-4-1-fast

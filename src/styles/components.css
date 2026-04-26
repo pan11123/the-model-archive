@@ -572,14 +572,14 @@ span.empty {
   border: 0;
   cursor: pointer;
   font: inherit;
-  font-size: 14px;
+  font-size: 15px;
   padding: 2px 6px;
 }
 .detail-close:hover { color: var(--text); }
 .detail-body { padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; }
 .detail-body .detail-head { --vc: var(--plasma); }
 .detail-label {
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--vc);
@@ -588,7 +588,7 @@ span.empty {
 .detail-model {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 28px;
+  font-size: 29px;
   color: var(--text);
   font-weight: 400;
   font-variation-settings: var(--fvs-display-36);
@@ -596,13 +596,13 @@ span.empty {
   margin: 0;
 }
 .detail-date {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--text-dim);
   letter-spacing: 0.05em;
   margin-bottom: 6px;
 }
 .detail-desc {
-  font-size: 12.5px;
+  font-size: 13.5px;
   color: var(--text);
   line-height: 1.55;
   margin: 0 0 12px 0;
@@ -613,7 +613,7 @@ span.empty {
   align-items: center;
   gap: 6px;
   color: var(--vc, var(--plasma));
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-weight: 600;

@@ -1,119 +1,311 @@
+- date: 2026-04-23
+  vendor: openai
+  model: GPT-5.5
+  description:
+    zh: 迄今最聪明的模型,编程、研究与跨工具数据分析能力进一步强化。
+    en: Smartest model yet, with stronger coding, research, and cross-tool data analysis.
+  link: https://openai.com/index/introducing-gpt-5-5/
+
 - date: 2026-04-16
+  vendor: anthropic
+  model: Claude Opus 4.7
+  description:
+    zh: 高级软件工程能力显著提升,视觉分辨率与指令遵从全面增强,支持 xhigh 努力级别。
+    en: Notable improvement in advanced software engineering with substantially better vision, instruction following, and a new xhigh effort level.
+  link: https://www.anthropic.com/news/claude-opus-4-7
+
+- date: 2026-03-17
+  vendor: openai
+  model: GPT-5.4 mini / GPT-5.4 nano
+  description:
+    zh: GPT-5.4 的精简版,针对编程、工具调用与高吞吐 API 场景优化。
+    en: Smaller, faster GPT-5.4 variants tuned for coding, tool use, and high-volume API workloads.
+  link: https://openai.com/index/introducing-gpt-5-4-mini-and-nano/
+
+- date: 2026-03-05
+  vendor: openai
+  model: GPT-5.4
+  description:
+    zh: 旗舰前沿模型,1M 上下文 + 计算机操作 + 工具检索全面升级。
+    en: Frontier flagship with SOTA coding, computer use, tool search, and 1M-token context.
+  link: https://openai.com/index/introducing-gpt-5-4/
+
+- date: 2026-03-03
+  vendor: openai
+  model: GPT-5.3 Instant
+  description:
+    zh: 日常对话体验优化,语气更顺畅、回应更实用。
+    en: Smoother, more useful everyday conversations.
+  link: https://openai.com/index/gpt-5-3-instant/
+
+- date: 2026-02-17
+  vendor: anthropic
+  model: Claude Sonnet 4.6
+  description:
+    zh: Sonnet 系列最强型号,编程、计算机操作、长程推理与设计能力全面升级,具备 1M 上下文窗口。
+    en: Most capable Sonnet yet with full upgrades across coding, computer use, long-context reasoning, and design, plus a 1M-token context window.
+  link: https://www.anthropic.com/news/claude-sonnet-4-6
+
+- date: 2026-02-12
+  vendor: openai
+  model: GPT-5.3-Codex-Spark
+  description:
+    zh: 首个实时编程模型,生成速度提升 15 倍,128K 上下文。
+    en: First real-time coding model with 15x faster generation and 128K context.
+  link: https://openai.com/index/introducing-gpt-5-3-codex-spark/
+
+- date: 2026-02-05
+  vendor: anthropic
+  model: Claude Opus 4.6
+  description:
+    zh: 最强模型升级,智能体编程与计算机操作行业领先,首次为 Opus 级模型引入 1M 上下文窗口。
+    en: Industry-leading model for agentic coding and computer use, with a first-ever 1M-token context window for the Opus tier.
+  link: https://www.anthropic.com/news/claude-opus-4-6
+
+- date: 2026-02-05
+  vendor: openai
+  model: GPT-5.3-Codex
+  description:
+    zh: Codex 原生 agent,前沿编程能力叠加通用推理,胜任长程技术工作。
+    en: Codex-native agent pairing frontier coding with general reasoning for long-horizon technical work.
+  link: https://openai.com/index/introducing-gpt-5-3-codex/
+
+- date: 2025-12-18
+  vendor: openai
+  model: GPT-5.2-Codex
+  description:
+    zh: 最强编程模型,支持长程推理、大规模代码改造与网络安全能力提升。
+    en: Most advanced coding model with long-horizon reasoning, large-scale code transformations, and cybersecurity gains.
+  link: https://openai.com/index/introducing-gpt-5-2-codex/
+
+- date: 2025-12-11
+  vendor: openai
+  model: GPT-5.2
+  description:
+    zh: 面向日常专业工作的前沿模型,推理、长上下文、编程与视觉全面 SOTA。
+    en: Advanced frontier model for daily professional work; SOTA reasoning, long-context, coding, and vision.
+  link: https://openai.com/index/introducing-gpt-5-2/
+
+- date: 2025-11-24
+  vendor: anthropic
+  model: Claude Opus 4.5
+  description:
+    zh: 旗舰模型全面升级,编程、智能体与计算机操作均为业界最佳,Token 用量大幅降低。
+    en: Frontier flagship model with state-of-the-art coding, agents, and computer use, alongside dramatically improved token efficiency.
+  link: https://www.anthropic.com/news/claude-opus-4-5
+
+- date: 2025-11-19
+  vendor: openai
+  model: GPT-5.1-Codex-Max
+  description:
+    zh: Codex 更智能的 agentic 编程模型,胜任长时、项目级任务。
+    en: Smarter, faster agentic coding model for long-running, project-scale work in Codex.
+  link: https://openai.com/index/gpt-5-1-codex-max/
+
+- date: 2025-11-12
+  vendor: openai
+  model: GPT-5.1
+  description:
+    zh: GPT-5 系列升级,模型更"温暖"、能力更强,新增 ChatGPT 语气风格定制。
+    en: Warmer, more capable GPT-5 upgrade with new tone and style customization in ChatGPT.
+  link: https://openai.com/index/gpt-5-1/
+
+- date: 2025-10-15
+  vendor: anthropic
+  model: Claude Haiku 4.5
+  description:
+    zh: 轻量模型升级,编程能力接近五个月前的 Sonnet 4,成本仅为其三分之一且速度提升一倍以上。
+    en: Lightweight model upgrade delivering near-Sonnet 4 coding performance at one-third the cost and over twice the speed.
+  link: https://www.anthropic.com/news/claude-haiku-4-5
+
+- date: 2025-09-29
+  vendor: anthropic
+  model: Claude Sonnet 4.5
+  description:
+    zh: 全球最强编程模型,计算机操作与智能体构建能力大幅提升,同步推出 Claude Agent SDK。
+    en: World's best coding model with major leaps in computer use and agent building, alongside the Claude Agent SDK.
+  link: https://www.anthropic.com/news/claude-sonnet-4-5
+
+- date: 2025-08-07
   vendor: openai
   model: GPT-5
   description:
-    zh: 旗舰模型发布,推理、编程、多语言全面升级。
-    en: Flagship release with major gains in reasoning, coding, and multilingual tasks.
-  link: https://openai.com/blog/gpt-5
+    zh: 旗舰新一代,在编程、数学、写作、健康与视觉等任务上全面 SOTA。
+    en: Flagship next-gen with SOTA performance across coding, math, writing, health, and vision.
+  link: https://openai.com/index/introducing-gpt-5/
 
-- date: 2026-04-02
+- date: 2025-08-05
   vendor: anthropic
-  model: Claude 4.7 Sonnet
+  model: Claude Opus 4.1
   description:
-    zh: 继续扩展思考预算,编程与工具调用提升显著。
-    en: Extended thinking budget with notable gains on coding and tool use.
-  link: https://anthropic.com/news/claude-4-7-sonnet
+    zh: Opus 4 的升级版,智能体编码、真实世界编程与推理能力显著提升。
+    en: Upgraded Opus 4 with significant gains in agentic coding, real-world programming, and reasoning.
+  link: https://www.anthropic.com/news/claude-opus-4-1
 
-- date: 2026-03-20
-  vendor: google
-  model: Gemini 2.5 Pro
-  description:
-    zh: 更长上下文 + 更强推理,编程 benchmark 领先。
-    en: Longer context plus stronger reasoning; leads on coding benchmarks.
-  link: https://deepmind.google/gemini-2-5
-
-- date: 2026-03-05
-  vendor: xai
-  model: Grok 4
-  description:
-    zh: Grok 家族第四代,聚焦推理与实时信息检索。
-    en: Fourth generation Grok, focused on reasoning and real-time retrieval.
-  link: https://x.ai/grok-4
-
-- date: 2026-02-18
-  vendor: deepseek
-  model: DeepSeek V4
-  description:
-    zh: 架构优化 + 成本更低,保持开源策略。
-    en: Architectural optimizations at lower cost, retaining open-source stance.
-  link: https://deepseek.com/v4
-
-- date: 2026-02-11
-  vendor: alibaba
-  model: Qwen3-Max
-  description:
-    zh: 通义千问 3 系列旗舰,中英双语编程增强。
-    en: Qwen3 flagship with boosted bilingual coding performance.
-  link: https://qwenlm.github.io/qwen3-max
-
-- date: 2026-01-28
-  vendor: zhipu
-  model: GLM-5
-  description:
-    zh: 智谱第五代基座,推理速度显著提升。
-    en: Zhipu 5th-gen base model with markedly faster inference.
-  link: https://z.ai/glm-5
-
-- date: 2026-01-15
-  vendor: moonshot
-  model: Kimi K2
-  description:
-    zh: 超长上下文 + 规划能力升级。
-    en: Ultra-long context with upgraded planning capability.
-  link: https://kimi.com/k2
-
-- date: 2025-12-20
-  vendor: minimax
-  model: MiniMax M2
-  description:
-    zh: 二代基座模型,侧重角色扮演与长对话稳定性。
-    en: Second-gen base model focused on roleplay and long-chat stability.
-  link: https://minimax.io/m2
-
-- date: 2025-12-05
-  vendor: bytedance
-  model: Doubao-Pro-256K
-  description:
-    zh: 256K 上下文版本,国内调优偏好突出。
-    en: 256K context variant, tuned for Chinese preferences.
-  link: https://doubao.com/pro-256k
-
-- date: 2025-11-22
-  vendor: anthropic
-  model: Claude 4.6 Sonnet
-  description:
-    zh: 编程与 agent workflow 针对性提升。
-    en: Targeted gains in coding and agent workflows.
-  link: https://anthropic.com/news/claude-4-6-sonnet
-
-- date: 2025-11-10
+- date: 2025-06-10
   vendor: openai
-  model: GPT-4.9
+  model: OpenAI o3-pro
   description:
-    zh: GPT-5 前最后一个主力版本,工具调用改进。
-    en: Final mainline release before GPT-5, improved tool use.
-  link: https://openai.com/blog/gpt-4-9
+    zh: o3 的强化版,在科学、教育、编程、商业、写作等领域均显著领先。
+    en: o3-pro outperforms o3 across science, education, programming, business, and writing.
+  link: https://help.openai.com/en/articles/9624314-model-release-notes
 
-- date: 2025-10-18
-  vendor: deepseek
-  model: DeepSeek-Coder V3
+- date: 2025-05-22
+  vendor: anthropic
+  model: Claude Opus 4 / Claude Sonnet 4
   description:
-    zh: 编程专精分支,代码补全 benchmark 登顶。
-    en: Code-specialized branch leading completion benchmarks.
-  link: https://deepseek.com/coder-v3
+    zh: 下一代 Claude 模型,Claude Code 正式发布,新增扩展思维工具调用与并行工具执行等能力。
+    en: Next-generation Claude models with Claude Code GA, extended thinking with tool use, and parallel tool execution.
+  link: https://www.anthropic.com/news/claude-4
 
-- date: 2025-09-30
-  vendor: google
-  model: Gemini 2.5 Flash
+- date: 2025-04-16
+  vendor: openai
+  model: OpenAI o3 / o4-mini
   description:
-    zh: Pro 的轻量兄弟版本,延迟与价格更友好。
-    en: Lighter sibling of Pro with better latency and pricing.
-  link: https://deepmind.google/gemini-2-5-flash
+    zh: 当前最聪明的推理模型组合,具备完整工具调用能力。
+    en: Smartest and most capable reasoning models to date with full tool access.
+  link: https://openai.com/index/introducing-o3-and-o4-mini/
 
-- date: 2025-09-12
-  vendor: alibaba
-  model: Qwen3
+- date: 2025-04-14
+  vendor: openai
+  model: GPT-4.1 / GPT-4.1 mini / GPT-4.1 nano
   description:
-    zh: 通义千问 3 开源基础版本。
-    en: Open-source baseline release of Qwen3.
-  link: https://qwenlm.github.io/qwen3
+    zh: API 全新模型族,编程、指令跟随、长上下文均大幅提升;首发 nano 版。
+    en: New API model family with major gains in coding, instruction following, and long context; first nano release.
+  link: https://openai.com/index/gpt-4-1/
+
+- date: 2025-02-27
+  vendor: openai
+  model: GPT-4.5 Preview
+  description:
+    zh: 迄今规模最大、对话能力最强的预览版,预训练与后训练进一步扩展。
+    en: Research preview of OpenAI's largest, best chat model; scaled-up pre- and post-training.
+  link: https://openai.com/index/introducing-gpt-4-5/
+
+- date: 2025-02-24
+  vendor: anthropic
+  model: Claude 3.7 Sonnet
+  description:
+    zh: Anthropic 首款混合推理模型,同时推出命令行编程工具 Claude Code。
+    en: Anthropic's first hybrid reasoning model, launched together with the Claude Code command-line coding tool.
+  link: https://www.anthropic.com/news/claude-3-7-sonnet
+
+- date: 2025-01-31
+  vendor: openai
+  model: OpenAI o3-mini
+  description:
+    zh: 推理模型小型版,在成本与能力之间推进新前沿。
+    en: Pushing the frontier of cost-effective reasoning.
+  link: https://openai.com/index/openai-o3-mini/
+
+- date: 2024-12-05
+  vendor: openai
+  model: OpenAI o1
+  description:
+    zh: 推理模型 o1 正式版发布,深度思考能力进一步增强,同步公开 System Card。
+    en: Full o1 reasoning model release with deeper deliberation; System Card published alongside.
+  link: https://openai.com/index/openai-o1-system-card/
+
+- date: 2024-10-22
+  vendor: anthropic
+  model: Claude 3.5 Sonnet (new) / Claude 3.5 Haiku
+  description:
+    zh: 升级版 Claude 3.5 Sonnet 与全新 Claude 3.5 Haiku 发布,同步推出计算机操作公测功能。
+    en: Upgraded Claude 3.5 Sonnet and new Claude 3.5 Haiku released alongside a public beta for computer use.
+  link: https://www.anthropic.com/news/3-5-models-and-computer-use
+
+- date: 2024-09-12
+  vendor: openai
+  model: OpenAI o1-preview / o1-mini
+  description:
+    zh: 推理系列首个预览,回答前进行思维链推理,擅长数学、科学与编程。
+    en: First preview of OpenAI's reasoning series; models think before responding, strong on math, science, and coding.
+  link: https://openai.com/index/introducing-openai-o1-preview/
+
+- date: 2024-06-21
+  vendor: anthropic
+  model: Claude 3.5 Sonnet
+  description:
+    zh: Claude 3.5 Sonnet 在速度与成本等同于 Sonnet 的同时,多项评测超越 Claude 3 Opus,并推出 Artifacts 协作功能。
+    en: Claude 3.5 Sonnet outperforms Claude 3 Opus on key benchmarks at twice the speed, and introduces the Artifacts collaborative workspace.
+  link: https://www.anthropic.com/news/claude-3-5-sonnet
+
+- date: 2024-05-13
+  vendor: openai
+  model: GPT-4o
+  description:
+    zh: 旗舰多模态 Omni,实时跨音频、视觉、文本推理。
+    en: Flagship Omni model reasoning across audio, vision, and text in real time.
+  link: https://openai.com/index/hello-gpt-4o/
+
+- date: 2024-03-04
+  vendor: anthropic
+  model: Claude 3 family
+  description:
+    zh: Claude 3 模型家族发布,包含 Haiku、Sonnet 和 Opus 三档,在多项基准测试中刷新业界纪录。
+    en: The Claude 3 family launches with Haiku, Sonnet, and Opus, setting new benchmarks across a wide range of cognitive tasks.
+  link: https://www.anthropic.com/news/claude-3-family
+
+- date: 2023-11-21
+  vendor: anthropic
+  model: Claude 2.1
+  description:
+    zh: Claude 2.1 将上下文窗口扩展至 200K token,幻觉率降低一半,新增系统提示与工具调用功能。
+    en: Claude 2.1 extends the context window to 200K tokens, halves hallucination rates, and introduces system prompts and tool use.
+  link: https://www.anthropic.com/news/claude-2-1
+
+- date: 2023-11-06
+  vendor: openai
+  model: GPT-4 Turbo
+  description:
+    zh: 128K 上下文、价格更低,DevDay 同步推出 Assistants API、Vision 与 DALL·E 3 API。
+    en: 128K context at lower prices; DevDay also brings Assistants API, Vision, and DALL·E 3 API.
+  link: https://openai.com/index/new-models-and-developer-products-announced-at-devday/
+
+- date: 2023-07-11
+  vendor: anthropic
+  model: Claude 2
+  description:
+    zh: Claude 2 发布,支持 100K 上下文,编程与数学能力显著提升,同步上线 claude.ai 公测版。
+    en: Claude 2 ships with a 100K context window, major gains in coding and math, and a new public beta at claude.ai.
+  link: https://www.anthropic.com/news/claude-2
+
+- date: 2023-06-13
+  vendor: openai
+  model: GPT-4-0613 / Function Calling
+  description:
+    zh: API 模型更可控,引入 function calling、更长上下文与更低价格。
+    en: More steerable API models with function calling, longer context, and lower prices.
+  link: https://openai.com/index/function-calling-and-other-api-updates/
+
+- date: 2023-03-14
+  vendor: openai
+  model: GPT-4
+  description:
+    zh: 大型多模态模型,在多项专业与学术基准上达到人类水平。
+    en: Large multimodal model with human-level performance on many professional and academic benchmarks.
+  link: https://openai.com/index/gpt-4-research/
+
+- date: 2023-03-14
+  vendor: anthropic
+  model: Claude / Claude Instant
+  description:
+    zh: Anthropic 首次发布 Claude 及轻量版 Claude Instant,通过 API 和聊天界面提供对话与文本处理能力。
+    en: Anthropic launches Claude and the lighter Claude Instant, offering conversational and text processing via API and chat interface.
+  link: https://www.anthropic.com/news/introducing-claude
+
+- date: 2023-03-01
+  vendor: openai
+  model: GPT-3.5 Turbo
+  description:
+    zh: GPT-3.5 Turbo 与 Whisper 模型上线 API,开发者可直接集成。
+    en: GPT-3.5 Turbo and Whisper made available via API for developers.
+  link: https://openai.com/index/introducing-chatgpt-and-whisper-apis/
+
+- date: 2022-11-30
+  vendor: openai
+  model: GPT-3.5 / ChatGPT
+  description:
+    zh: ChatGPT 发布,以对话形式交互,可承接追问、承认错误、拒绝不当请求。
+    en: ChatGPT launched; conversational model that handles follow-ups, admits mistakes, and refuses improper requests.
+  link: https://openai.com/index/chatgpt/

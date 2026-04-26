@@ -41,11 +41,23 @@ function render(item: DialogItem) {
   `;
 }
 
-function openByAnchor(anchor: string) {
+function openByAnchor(anchor: string, triggerRect?: DOMRect) {
   const item = payload[anchor];
   if (!item) return;
   render(item);
-  if (!dialog.open) dialog.showModal();
+  if (!triggerRect) {
+    if (!dialog.open) dialog.showModal();
+  } else {
+    const cx = triggerRect.left + triggerRect.width / 2;
+    const cy = triggerRect.top + triggerRect.height / 2;
+    dialog.style.setProperty('--ox', `${cx}px`);
+    dialog.style.setProperty('--oy', `${cy}px`);
+    dialog.dataset.anim = 'in';
+    if (!dialog.open) dialog.showModal();
+    requestAnimationFrame(() => {
+      dialog.dataset.anim = 'active';
+    });
+  }
   const newHash = `#${anchor}`;
   if (window.location.hash !== newHash) {
     history.replaceState(null, '', `${window.location.pathname}${window.location.search}${newHash}`);
@@ -53,14 +65,20 @@ function openByAnchor(anchor: string) {
 }
 
 function closeDialog() {
-  if (dialog.open) dialog.close();
+  if (!dialog.open) return;
+  if (dialog.dataset.anim === 'active') {
+    dialog.dataset.anim = 'out';
+    dialog.addEventListener('transitionend', () => dialog.close(), { once: true });
+  } else {
+    dialog.close();
+  }
   if (window.location.hash) {
     history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
   }
 }
 
 document.querySelectorAll<HTMLButtonElement>('.chip[data-anchor]').forEach((btn) => {
-  btn.addEventListener('click', () => openByAnchor(btn.dataset.anchor!));
+  btn.addEventListener('click', () => openByAnchor(btn.dataset.anchor!, btn.getBoundingClientRect()));
 });
 
 dialog.addEventListener('close', () => {

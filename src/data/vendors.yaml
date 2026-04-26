@@ -12,7 +12,7 @@
   website: https://deepmind.google
 - id: xai
   name: { zh: xAI, en: xAI }
-  color: "#000000"
+  color: "#8b8fa3"
   website: https://x.ai
 - id: deepseek
   name: { zh: DeepSeek, en: DeepSeek }

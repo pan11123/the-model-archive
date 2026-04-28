@@ -53,8 +53,8 @@ export const zh = {
   },
   lang: { zh: '中', en: 'EN', switchTo: '切换至' },
   footer: {
-    creditLine: '由 <a href="https://github.com/pan11123">@pan11123</a> 手工维护',
-    openIssue: '缺失发布?提交 Issue',
+    creditLine: '由 <a href="https://github.com/pan11123">@pan11123</a> 维护',
+    openIssue: '缺失发布？提交 Issue',
     github: 'GITHUB',
     data: 'DATA',
     rss: 'RSS',

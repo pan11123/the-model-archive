@@ -1,17 +1,3 @@
-- date: '2021-05-18'
-  vendor: google
-  model: LaMDA
-  description:
-    zh: 对话语言模型,针对多轮对话的合理性与具体性显著优化。
-    en: Dialogue language model optimized for free-flowing, multi-turn conversation with improved sensibleness and specificity.
-  link: https://blog.google/innovation-and-ai/products/lamda/
-- date: '2022-04-04'
-  vendor: google
-  model: PaLM
-  description:
-    zh: 5400 亿参数稠密 Transformer,在语言理解、推理与代码生成上取得突破性 few-shot 表现。
-    en: 540-billion-parameter dense Transformer achieving breakthrough few-shot performance across language understanding, reasoning, and code generation.
-  link: https://research.google/blog/pathways-language-model-palm-scaling-to-540-billion-parameters-for-breakthrough-performance/
 - date: '2023-02-06'
   vendor: google
   model: Bard / LaMDA

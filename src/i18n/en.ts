@@ -55,7 +55,6 @@ export const en: typeof zh = {
   },
   lang: { zh: '中', en: 'EN', switchTo: 'Switch to' },
   footer: {
-    creditLine: 'CURATED BY <a href="https://github.com/pan11123">@pan11123</a>',
     openIssue: 'MISSING A RELEASE? OPEN ISSUE',
     github: 'GITHUB',
     data: 'DATA',

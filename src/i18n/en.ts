@@ -8,7 +8,7 @@ export const en: typeof zh = {
     line2: 'Archive',
     eyebrow: 'ARCHIVE',
     eyebrowSub: 'ARCHIVE OF LLM RELEASES',
-    subDescription: 'Tracking major model releases from every major AI vendor.',
+    subDescription: 'Tracking major LLM releases from every major AI vendor.',
     kv: {
       vendors: 'VENDORS',
       totalReleases: 'TOTAL RELEASES',

@@ -6,7 +6,7 @@ export const zh = {
     line2: 'Archive',
     eyebrow: '模型档案',
     eyebrowSub: '大语言模型发布档案',
-    subDescription: '追踪全球主要 AI 厂商的重大模型发布节奏。',
+    subDescription: '追踪全球主要 AI 厂商的重大大语言模型发布节奏。',
     kv: {
       vendors: '收录厂商',
       totalReleases: '总发布数',

@@ -1,1 +1,155 @@
-[]
+- date: '2023-11-02'
+  vendor: deepseek
+  model: DeepSeek Coder
+  description:
+    zh: 面向代码的密集型大语言模型,支持多种编程语言,开源发布。
+    en: Dense code-focused LLM supporting multiple programming languages, released as open-source.
+  link: https://github.com/deepseek-ai/DeepSeek-Coder
+- date: '2023-11-29'
+  vendor: deepseek
+  model: DeepSeek LLM / DeepSeek-LLM 7B / 67B
+  description:
+    zh: DeepSeek 首批通用大语言模型,7B 与 67B 两种规格,开源发布。
+    en: DeepSeek's debut general-purpose LLMs in 7B and 67B sizes, released as open-source.
+  link: https://github.com/deepseek-ai/DeepSeek-LLM
+- date: '2024-01-11'
+  vendor: deepseek
+  model: DeepSeek-MoE
+  description:
+    zh: 采用混合专家架构的通用语言模型,以更低计算成本接近 Dense 模型性能。
+    en: General-purpose MoE language model approaching dense-model performance at lower compute cost.
+  link: https://github.com/deepseek-ai/DeepSeek-MoE
+- date: '2024-02-06'
+  vendor: deepseek
+  model: DeepSeekMath / DeepSeekMath 7B
+  description:
+    zh: 面向数学推理的 7B 模型,在 GSM8K、MATH 等基准上接近闭源水平。
+    en: 7B model tuned for mathematical reasoning, nearing closed-source performance on GSM8K and MATH benchmarks.
+  link: https://github.com/deepseek-ai/DeepSeek-Math
+- date: '2024-03-11'
+  vendor: deepseek
+  model: DeepSeek-VL
+  description:
+    zh: DeepSeek 首个视觉语言模型,支持图像理解与多模态对话。
+    en: DeepSeek's first vision-language model enabling image understanding and multimodal dialogue.
+  link: https://github.com/deepseek-ai/DeepSeek-VL
+- date: '2024-05-06'
+  vendor: deepseek
+  model: DeepSeek-V2
+  description:
+    zh: 引入 MLA 与 DeepSeekMoE 架构,推理成本大幅降低,性能比肩 GPT-4 级别。
+    en: Introduces MLA and DeepSeekMoE for dramatically cheaper inference at GPT-4-class performance.
+  link: https://github.com/deepseek-ai/DeepSeek-V2
+- date: '2024-05-16'
+  vendor: deepseek
+  model: DeepSeek-V2-Lite
+  description:
+    zh: DeepSeek-V2 的轻量版本,参数更少、速度更快,适合资源受限场景。
+    en: Lightweight DeepSeek-V2 variant with fewer parameters and faster speed for resource-constrained use.
+  link: https://github.com/deepseek-ai/DeepSeek-V2
+- date: '2024-06-17'
+  vendor: deepseek
+  model: DeepSeek-Coder-V2
+  description:
+    zh: 基于 MoE 架构的代码模型,代码生成与理解达到 GPT-4 Turbo 水平。
+    en: MoE-based code model reaching GPT-4 Turbo level in code generation and understanding.
+  link: https://github.com/deepseek-ai/DeepSeek-Coder-V2
+- date: '2024-09-05'
+  vendor: deepseek
+  model: DeepSeek-V2.5
+  description:
+    zh: 合并通用 Chat 与 Coder 模型,写作与编程能力全面提升,同步开源。
+    en: Merges Chat and Coder into one model with across-the-board gains in writing and coding; open-sourced.
+  link: https://api-docs.deepseek.com/news/news0905
+- date: '2024-11-20'
+  vendor: deepseek
+  model: DeepSeek-R1-Lite-Preview
+  description:
+    zh: 首个推理模型预览版,在 AIME 与 MATH 基准上达到 o1-preview 水平,思维过程实时可见。
+    en: First reasoning model preview, matching o1-preview on AIME and MATH with transparent real-time thinking.
+  link: https://api-docs.deepseek.com/news/news1120
+- date: '2024-12-10'
+  vendor: deepseek
+  model: DeepSeek-V2.5-1210
+  description:
+    zh: V2.5 小幅升级,数学与编程基准显著提升,优化文件上传与网页摘要体验。
+    en: Incremental V2.5 upgrade with notable math and coding gains; improved file-upload and web-summarization UX.
+  link: https://api-docs.deepseek.com/news/news1210
+- date: '2024-12-26'
+  vendor: deepseek
+  model: DeepSeek-V3
+  description:
+    zh: 671B 参数 MoE 模型,训练成本仅 557 万美元,多项评测比肩顶级闭源模型。
+    en: 671B-parameter MoE model trained for $5.57M, rivaling top closed-source models on major benchmarks.
+  link: https://api-docs.deepseek.com/news/news1226
+- date: '2025-01-20'
+  vendor: deepseek
+  model: DeepSeek-R1 / DeepSeek-R1-Zero / DeepSeek-R1-Distill
+  description:
+    zh: 开源推理模型系列,R1-Zero 纯强化学习训练,R1 引入冷启动,Distill 蒸馏至小模型。
+    en: Open-source reasoning family; R1-Zero trained with pure RL, R1 with cold-start, Distill for smaller models.
+  link: https://api-docs.deepseek.com/news/news250120
+- date: '2025-03-24'
+  vendor: deepseek
+  model: DeepSeek-V3-0324
+  description:
+    zh: V3 升级版,数学与编程基准大幅提升,前端网页生成与中文写作显著优化。
+    en: V3 upgrade with major math and coding gains; significantly improved front-end code generation and Chinese writing.
+  link: https://api-docs.deepseek.com/updates
+- date: '2025-04-30'
+  vendor: deepseek
+  model: DeepSeek-Prover-V2
+  description:
+    zh: 专为形式化定理证明设计的模型,在 Lean 4 等证明辅助工具上表现优异。
+    en: Model purpose-built for formal theorem proving, excelling on proof assistants like Lean 4.
+  link: https://github.com/deepseek-ai/DeepSeek-Prover-V2
+- date: '2025-05-28'
+  vendor: deepseek
+  model: DeepSeek-R1-0528
+  description:
+    zh: R1 升级版,推理与编程能力大幅提升,幻觉显著降低,新增 JSON 输出与函数调用。
+    en: Upgraded R1 with major reasoning and coding gains, reduced hallucinations, plus JSON output and function calling.
+  link: https://api-docs.deepseek.com/updates
+- date: '2025-08-21'
+  vendor: deepseek
+  model: DeepSeek-V3.1
+  description:
+    zh: 首款混合推理架构模型,支持 Think / Non-Think 双模式,智能体能力显著增强。
+    en: First hybrid reasoning model supporting Think / Non-Think dual modes with significantly stronger agent capabilities.
+  link: https://api-docs.deepseek.com/news/news250821
+- date: '2025-09-22'
+  vendor: deepseek
+  model: DeepSeek-V3.1-Terminus
+  description:
+    zh: V3.1 维护更新,改善中英文混排与异常字符问题,优化 Code Agent 与 Search Agent。
+    en: V3.1 maintenance update fixing Chinese-English mixing and abnormal characters; improved Code & Search Agents.
+  link: https://api-docs.deepseek.com/updates
+- date: '2025-09-29'
+  vendor: deepseek
+  model: DeepSeek-V3.2-Exp
+  description:
+    zh: V3.2 实验版,deepseek-chat 与 deepseek-reasoner 同步升级。
+    en: Experimental V3.2; both deepseek-chat and deepseek-reasoner upgraded simultaneously.
+  link: https://api-docs.deepseek.com/updates
+- date: '2025-11-27'
+  vendor: deepseek
+  model: DeepSeek-Math-V2
+  description:
+    zh: 面向数学推理的第二代模型,在竞赛级数学基准上取得突破。
+    en: Second-generation math-focused model achieving breakthroughs on competition-level math benchmarks.
+  link: https://github.com/deepseek-ai/DeepSeek-Math-V2
+- date: '2025-12-01'
+  vendor: deepseek
+  model: DeepSeek-V3.2 / DeepSeek-V3.2-Speciale
+  description:
+    zh: 推理优先的模型升级,首次在工具调用中集成思维链,Speciale 版本达到竞赛金牌水平。
+    en: Reasoning-first upgrade with first-ever thinking-in-tool-use; Speciale achieves gold-medal competition performance.
+  link: https://api-docs.deepseek.com/news/news251201
+- date: '2026-04-24'
+  vendor: deepseek
+  model: DeepSeek-V4-Pro / DeepSeek-V4-Flash
+  description:
+    zh: 第四代模型,V4-Pro 1.6T 参数比肩顶级闭源模型,V4-Flash 轻量高效,默认支持 1M 上下文。
+    en: Fourth-generation models; V4-Pro at 1.6T rivals top closed-source models, V4-Flash is lightweight and efficient,
+      both with default 1M context.
+  link: https://api-docs.deepseek.com/news/news260424

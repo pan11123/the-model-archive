@@ -1,1 +1,231 @@
-[]
+- date: '2023-04-11'
+  vendor: alibaba
+  model: 通义千问 / Tongyi Qianwen
+  description:
+    zh: 阿里云首个大语言模型，面向企业智能转型场景。
+    en: Alibaba Cloud's first large language model for enterprise intelligence transformation.
+  link: https://www.alibabacloud.com/blog/alibaba-cloud-unveils-new-ai-model-to-support-enterprises-intelligence-transformation_599877
+- date: '2023-08-03'
+  vendor: alibaba
+  model: Qwen-7B / Qwen-7B-Chat
+  description:
+    zh: 70 亿参数通用大语言模型及对话版本，开源发布。
+    en: 7B-parameter general-purpose LLM and chat variant, released as open-source.
+  link: https://github.com/QwenLM/Qwen
+- date: '2023-09-25'
+  vendor: alibaba
+  model: Qwen-14B / Qwen-14B-Chat
+  description:
+    zh: 140 亿参数通用大语言模型及对话版本，开源发布。
+    en: 14B-parameter general-purpose LLM and chat variant, released as open-source.
+  link: https://github.com/QwenLM/Qwen
+- date: '2023-10-31'
+  vendor: alibaba
+  model: 通义千问 2.0 / Tongyi Qianwen 2.0
+  description:
+    zh: 通义千问第二代版本，参数规模大幅提升，面向行业应用推出专属模型。
+    en: Second-generation Tongyi Qianwen with significantly larger parameters and industry-specific models.
+  link: https://www.alibabacloud.com/blog/alibaba-cloud-launches-tongyi-qianwen-2-0-and-industry-specific-models-to-support-customers-reap-benefits-of-generative-ai_600526
+- date: '2023-11-30'
+  vendor: alibaba
+  model: Qwen-72B / Qwen-72B-Chat / Qwen-1.8B / Qwen-1.8B-Chat
+  description:
+    zh: 720 亿与 18 亿参数模型同步开源，覆盖大中小多种规格。
+    en: 72B and 1.8B models open-sourced simultaneously, covering large to small parameter scales.
+  link: https://github.com/QwenLM/Qwen
+- date: '2024-02-05'
+  vendor: alibaba
+  model: Qwen1.5
+  description:
+    zh: Qwen 1.5 系列全面升级，涵盖 0.5B 至 72B 多种规格，性能与对齐能力显著提升。
+    en: Qwen 1.5 series with full upgrades from 0.5B to 72B, with significant gains in performance and alignment.
+  link: https://qwen.ai/blog?id=qwen1.5
+- date: '2024-03-28'
+  vendor: alibaba
+  model: Qwen1.5-MoE
+  description:
+    zh: 引入混合专家架构，以更少激活参数实现接近 Dense 模型的性能。
+    en: Introduces Mixture-of-Experts architecture, approaching dense model performance with fewer active parameters.
+  link: https://qwen.ai/blog?id=qwen-moe
+- date: '2024-04-01'
+  vendor: alibaba
+  model: Qwen1.5-32B
+  description:
+    zh: 320 亿参数模型，在性能与效率之间取得良好平衡。
+    en: 32B-parameter model striking a strong balance between performance and efficiency.
+  link: https://qwen.ai/blog?id=qwen1.5-32b
+- date: '2024-04-24'
+  vendor: alibaba
+  model: Qwen1.5-110B
+  description:
+    zh: 1100 亿参数的 Qwen1.5 最大规格模型，性能进一步突破。
+    en: Largest Qwen1.5 variant at 110B parameters with further performance breakthroughs.
+  link: https://qwen.ai/blog?id=qwen1.5-110b
+- date: '2024-06-06'
+  vendor: alibaba
+  model: Qwen2
+  description:
+    zh: Qwen2 系列发布，支持最长 128K 上下文，多语言与代码能力全面提升。
+    en: Qwen2 series with up to 128K context, comprehensive improvements in multilingual and coding capabilities.
+  link: https://qwen.ai/blog?id=qwen2
+- date: '2024-08-08'
+  vendor: alibaba
+  model: Qwen2-Math
+  description:
+    zh: 面向数学推理的专用模型系列，在多个数学基准上取得领先成绩。
+    en: Math-specialized model series achieving leading scores on multiple math benchmarks.
+  link: https://qwen.ai/blog?id=qwen2-math
+- date: '2024-09-19'
+  vendor: alibaba
+  model: Qwen2.5
+  description:
+    zh: Qwen2.5 系列全面发布，涵盖 Dense 与 MoE 架构，开源规模空前。
+    en: Full Qwen2.5 series release covering dense and MoE architectures, with unprecedented open-source scale.
+  link: https://qwenlm.github.io/blog/qwen2.5/
+- date: '2024-09-19'
+  vendor: alibaba
+  model: Qwen2.5-LLM
+  description:
+    zh: Qwen2.5 语言模型技术报告，详述训练细节与评测结果。
+    en: Qwen2.5 LLM technical report detailing training methodology and evaluation results.
+  link: https://qwen.ai/blog?id=qwen2.5-llm
+- date: '2024-09-19'
+  vendor: alibaba
+  model: Qwen2.5-Math
+  description:
+    zh: 第二代数学推理模型，数学能力进一步提升，开源发布。
+    en: Second-generation math reasoning model with further improved mathematical capabilities, open-sourced.
+  link: https://github.com/QwenLM/Qwen2.5-Math
+- date: '2024-11-11'
+  vendor: alibaba
+  model: Qwen2.5-Coder
+  description:
+    zh: 面向代码生成的 Qwen2.5-Coder 系列，代码能力达到同级别领先水平。
+    en: Qwen2.5-Coder series for code generation, achieving leading performance among same-tier models.
+  link: https://qwen.ai/blog?id=qwen2.5-coder-family
+- date: '2024-11-28'
+  vendor: alibaba
+  model: QwQ-32B-Preview
+  description:
+    zh: Qwen 首个推理模型预览版，展示深度思考与反思能力。
+    en: Qwen's first reasoning model preview, demonstrating deep thinking and reflection capabilities.
+  link: https://qwenlm.github.io/blog/qwq-32b-preview/
+- date: '2025-01-28'
+  vendor: alibaba
+  model: Qwen2.5-Max
+  description:
+    zh: Qwen2.5 系列最大规格闭源模型，综合性能比肩顶级闭源模型。
+    en: Largest closed-source model in the Qwen2.5 series, rivaling top closed-source models in overall performance.
+  link: https://qwen.ai/blog?id=qwen2.5-max
+- date: '2025-02-24'
+  vendor: alibaba
+  model: QwQ-Max-Preview
+  description:
+    zh: QwQ 推理模型 Max 规格预览版，推理能力进一步增强。
+    en: Max-size preview of the QwQ reasoning model with further enhanced reasoning capabilities.
+  link: https://qwen.ai/blog?id=qwq-max-preview
+- date: '2025-03-06'
+  vendor: alibaba
+  model: QwQ-32B
+  description:
+    zh: QwQ 推理模型正式版，320 亿参数开源发布，推理能力突出。
+    en: Official QwQ reasoning model at 32B parameters, open-sourced with outstanding reasoning capabilities.
+  link: https://qwenlm.github.io/blog/qwq-32b/
+- date: '2025-04-29'
+  vendor: alibaba
+  model: Qwen3
+  description:
+    zh: Qwen3 系列全面发布，支持思考模式切换，涵盖多种参数规格，全面开源。
+    en: Full Qwen3 series release with switchable thinking mode, covering multiple parameter sizes, fully open-sourced.
+  link: https://qwenlm.github.io/blog/qwen3/
+- date: '2025-07-22'
+  vendor: alibaba
+  model: Qwen3-Coder
+  description:
+    zh: Qwen3 代码专用模型，代码生成与理解能力全面升级。
+    en: Qwen3 code-specialized model with comprehensive upgrades in code generation and understanding.
+  link: https://qwen.ai/blog?id=qwen3-coder
+- date: '2025-07-25'
+  vendor: alibaba
+  model: Qwen3-2507 / Qwen3-Instruct-2507 / Qwen3-Thinking-2507
+  description:
+    zh: Qwen3 中期更新版本，指令遵循与思考能力同步改进。
+    en: Mid-cycle Qwen3 update with simultaneous improvements in instruction following and thinking capabilities.
+  link: https://github.com/QwenLM/Qwen3
+- date: '2025-09-10'
+  vendor: alibaba
+  model: Qwen3-Next-80B-A3B
+  description:
+    zh: MoE 架构实验模型，800 亿总参数、30 亿激活参数，探索高效推理路径。
+    en: Experimental MoE model with 80B total and 3B active parameters, exploring efficient inference pathways.
+  link: https://qwen.ai/blog?from=research.latest-advancements-list&id=4074cca80393150c248e508aa62983f9cb7d27cd
+- date: '2025-09-23'
+  vendor: alibaba
+  model: Qwen3-Max
+  description:
+    zh: Qwen3 系列最大规格闭源模型，综合能力全面领先。
+    en: Largest closed-source model in the Qwen3 series with comprehensive leading performance.
+  link: https://qwen.ai/blog?id=qwen3-max
+- date: '2025-10-17'
+  vendor: alibaba
+  model: Qwen3-Coder-Flash
+  description:
+    zh: Qwen3-Coder 轻量版本，以更低延迟提供代码生成能力。
+    en: Lightweight Qwen3-Coder variant delivering code generation with lower latency.
+  link: https://qwen.ai/blog?id=qwen3-coder-flash
+- date: '2026-01-25'
+  vendor: alibaba
+  model: Qwen3-Max-Thinking
+  description:
+    zh: Qwen3-Max 推理增强版，深度思考能力显著提升。
+    en: Reasoning-enhanced Qwen3-Max with significantly improved deep thinking capabilities.
+  link: https://qwen.ai/blog?id=qwen3-max-thinking
+- date: '2026-02-02'
+  vendor: alibaba
+  model: Qwen3-Coder-Next
+  description:
+    zh: Qwen3-Coder 下一代版本，代码智能体能力大幅增强。
+    en: Next-generation Qwen3-Coder with significantly enhanced code agent capabilities.
+  link: https://qwen.ai/blog?id=qwen3-coder-next
+- date: '2026-02-15'
+  vendor: alibaba
+  model: Qwen3.5 / Qwen3.5-397B-A17B
+  description:
+    zh: Qwen3.5 系列发布，397B 总参数、17B 激活参数的 MoE 架构，性能大幅跃升。
+    en: Qwen3.5 series featuring a 397B-total / 17B-active MoE architecture with major performance gains.
+  link: https://qwen.ai/blog?id=qwen3.5
+- date: '2026-03-18'
+  vendor: alibaba
+  model: Qwen3.5-Max-Preview
+  description:
+    zh: Qwen3.5 Max 规格预览版，综合能力进一步突破。
+    en: Max-size preview of Qwen3.5 with further breakthroughs in overall performance.
+  link: https://qwen.ai/blog?id=qwen3.5-max-preview
+- date: '2026-04-01'
+  vendor: alibaba
+  model: Qwen3.6-Plus
+  description:
+    zh: Qwen3.6 系列首发版本，能力全面升级。
+    en: Debut release of the Qwen3.6 series with comprehensive capability upgrades.
+  link: https://qwen.ai/blog?id=qwen3.6
+- date: '2026-04-14'
+  vendor: alibaba
+  model: Qwen3.6-35B-A3B
+  description:
+    zh: MoE 架构开源模型，350 亿总参数、30 亿激活参数，兼顾性能与效率。
+    en: Open-source MoE model with 35B total and 3B active parameters, balancing performance and efficiency.
+  link: https://qwen.ai/blog?id=qwen3.6-35b-a3b
+- date: '2026-04-17'
+  vendor: alibaba
+  model: Qwen3.6-Max-Preview
+  description:
+    zh: Qwen3.6 Max 规格预览版，顶级闭源性能。
+    en: Max-size preview of Qwen3.6 targeting top-tier closed-source performance.
+  link: https://qwen.ai/blog?id=qwen3.6-max-preview
+- date: '2026-04-21'
+  vendor: alibaba
+  model: Qwen3.6-27B
+  description:
+    zh: 270 亿参数 Dense 模型，Qwen3.6 系列的开源主力版本。
+    en: 27B-parameter dense model serving as the flagship open-source release of the Qwen3.6 series.
+  link: https://qwen.ai/blog?id=qwen3.6-27b

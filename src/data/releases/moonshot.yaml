@@ -1,1 +1,91 @@
-[]
+- date: '2023-10-01'
+  vendor: moonshot
+  model: Kimi Chat / Moonshot LLM
+  description:
+    zh: 月之暗面发布首款大语言模型及 Kimi Chat 对话产品,面向中文用户。
+    en: Moonshot AI launches its first LLM and the Kimi Chat conversational product for Chinese users.
+  link: https://www.kimi.com/
+- date: '2023-11-16'
+  vendor: moonshot
+  model: Kimi Chat 128K
+  description:
+    zh: Kimi Chat 上下文窗口扩展至 128K tokens,大幅提升长文本处理能力。
+    en: Kimi Chat extends its context window to 128K tokens, greatly improving long-text processing.
+  link: https://www.kimi.com/
+- date: '2024-03-01'
+  vendor: moonshot
+  model: Kimi 2M Context
+  description:
+    zh: Kimi 支持高达 200 万字超长上下文,开创长文本处理新纪元。
+    en: Kimi supports up to 2M-character ultra-long context, pioneering a new era in long-text processing.
+  link: https://www.kimi.com/
+- date: '2024-10-11'
+  vendor: moonshot
+  model: Kimi Explore Edition
+  description:
+    zh: 探索版上线,集成深度搜索与自主规划能力,可自动拆解复杂任务。
+    en: Explore Edition launches with deep search and autonomous planning, capable of decomposing complex tasks automatically.
+  link: https://www.kimi.com/
+- date: '2025-01-20'
+  vendor: moonshot
+  model: Kimi k1.5
+  description:
+    zh: 强化学习驱动的推理模型,在数学与编程基准上达到业界领先水平,开源发布。
+    en: RL-driven reasoning model achieving state-of-the-art on math and coding benchmarks, released as open-source.
+  link: https://github.com/MoonshotAI/Kimi-k1.5
+- date: '2025-06-01'
+  vendor: moonshot
+  model: Kimi-Dev
+  description:
+    zh: 面向软件开发的代码模型,在代码生成与修复任务上表现优异,开源发布。
+    en: Software-development-focused code model excelling at code generation and bug fixing, released as open-source.
+  link: https://github.com/MoonshotAI/Kimi-Dev
+- date: '2025-06-20'
+  vendor: moonshot
+  model: Kimi-Researcher
+  description:
+    zh: 自主研究智能体,可独立完成多步骤信息检索、分析与报告生成。
+    en: Autonomous research agent capable of independently performing multi-step information retrieval, analysis, and report generation.
+  link: https://moonshotai.github.io/Kimi-Researcher/
+- date: '2025-07-11'
+  vendor: moonshot
+  model: Kimi K2 / Kimi-K2-Base / Kimi-K2-Instruct
+  description:
+    zh: 万亿参数 MoE 架构基础模型及指令微调版本,开源发布,性能比肩顶级闭源模型。
+    en: Trillion-parameter MoE foundation model with instruction-tuned variant, open-sourced, rivaling top closed-source models.
+  link: https://www.kimi.com/blog/kimi-k2
+- date: '2025-09-05'
+  vendor: moonshot
+  model: Kimi-K2-Instruct-0905
+  description:
+    zh: K2-Instruct 升级版本,综合能力全面提升,在多项基准上刷新开源模型纪录。
+    en: Upgraded K2-Instruct with across-the-board improvements, setting new open-source records on multiple benchmarks.
+  link: https://huggingface.co/moonshotai/Kimi-K2-Instruct-0905
+- date: '2025-10-30'
+  vendor: moonshot
+  model: Kimi Linear / Kimi-Linear-48B-A3B
+  description:
+    zh: 基于线性注意力机制的高效模型,48B 总参数中仅 3B 激活,兼顾性能与推理效率。
+    en: Efficient model based on linear attention with 48B total parameters and only 3B activated, balancing performance and inference efficiency.
+  link: https://huggingface.co/papers/2510.26692
+- date: '2025-11-06'
+  vendor: moonshot
+  model: Kimi K2 Thinking
+  description:
+    zh: K2 推理增强版本,支持深度思维链,在复杂数学与编程任务上显著提升。
+    en: K2 reasoning-enhanced version with deep chain-of-thought support, significantly improved on complex math and coding tasks.
+  link: https://www.kimi.com/blog/kimi-k2-thinking
+- date: '2026-01-27'
+  vendor: moonshot
+  model: Kimi K2.5
+  description:
+    zh: K2 重大升级版本,推理与通用能力全面增强,多项基准达到业界最优。
+    en: Major K2 upgrade with comprehensively enhanced reasoning and general capabilities, achieving best-in-class on multiple benchmarks.
+  link: https://www.kimi.com/blog/kimi-k2-5
+- date: '2026-04-20'
+  vendor: moonshot
+  model: Kimi K2.6
+  description:
+    zh: K2 系列最新版本,进一步优化推理与多模态能力,开源发布。
+    en: Latest K2 series release with further optimized reasoning and multimodal capabilities, released as open-source.
+  link: https://www.kimi.com/blog/kimi-k2-6

@@ -55,9 +55,7 @@ export const en: typeof zh = {
   },
   lang: { zh: '中', en: 'EN', switchTo: 'Switch to' },
   footer: {
+    disclaimer: 'Information is for reference only. Please submit an Issue or PR for corrections.',
     openIssue: 'MISSING A RELEASE? OPEN ISSUE',
-    github: 'GITHUB',
-    data: 'DATA',
-    rss: 'RSS',
   },
 };

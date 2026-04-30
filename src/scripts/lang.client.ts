@@ -45,11 +45,8 @@ const STATIC_TEXT: Array<{ sel: string; fn: (d: Dict) => string; html?: boolean 
   { sel: '.matrix-head .legend span:nth-child(1)', fn: d => `— ${d.matrix.legendEmpty}` },
   { sel: '.matrix-head .legend span:nth-child(2)', fn: d => `● ${d.matrix.legendActive}` },
   // Footer
-  { sel: '.site-footer .footer-main span:nth-child(3)', fn: d => d.footer.creditLine, html: true },
+  { sel: '.site-footer .disclaimer', fn: d => d.footer.disclaimer },
   { sel: '.site-footer .footer-main a', fn: d => d.footer.openIssue },
-  { sel: '.site-footer .marks a:nth-child(1)', fn: d => d.footer.github },
-  { sel: '.site-footer .marks a:nth-child(2)', fn: d => d.footer.data },
-  { sel: '.site-footer .marks a:nth-child(3)', fn: d => d.footer.rss },
 ];
 
 // Update vendor name spans. They have data-name-zh and data-name-en attributes.

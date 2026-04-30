@@ -53,9 +53,7 @@ export const zh = {
   },
   lang: { zh: '中', en: 'EN', switchTo: '切换至' },
   footer: {
+    disclaimer: '本站信息仅供参考，如有出入请提交 Issue 或 PR。',
     openIssue: '缺失发布？提交 Issue',
-    github: 'GITHUB',
-    data: 'DATA',
-    rss: 'RSS',
   },
 };

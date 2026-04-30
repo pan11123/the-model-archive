@@ -9,7 +9,7 @@
   align-items: center;
   gap: 22px;
   padding: 9px 24px;
-  font-size: 10.5px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -31,6 +31,15 @@
 .statusbar .sb-brand strong { font-weight: 700; }
 .statusbar .sb-meta { color: var(--text-dim); }
 .statusbar .sb-sep { color: var(--text-faded); }
+.statusbar .sb-gh {
+  color: #f2ebd9;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  justify-self: end;
+  transition: color 0.15s;
+}
+.statusbar .sb-gh:hover { color: var(--plasma); }
 .statusbar .lang-toggle {
   display: flex;
   background: var(--canvas-lift);
@@ -43,7 +52,7 @@
   border: 0;
   color: var(--text-dim);
   font: inherit;
-  font-size: 10.5px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   padding: 3px 10px;
   cursor: pointer;
@@ -638,7 +647,7 @@ span.empty {
   gap: 20px;
   border-top: 1px solid var(--border);
   color: var(--text-faded);
-  font-size: 10.5px;
+  font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   position: relative;
@@ -653,11 +662,14 @@ span.empty {
   transition: color 0.15s;
 }
 .site-footer a:hover { color: var(--plasma); }
-.site-footer .marks { display: flex; gap: 28px; }
-.site-footer .marks a.disabled {
-  opacity: 0.35;
-  pointer-events: none;
-  cursor: not-allowed;
+.site-footer .disclaimer {
+  grid-column: 1 / -1;
+  color: var(--text-faded);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  margin: 0;
+  opacity: 0.7;
 }
 
 @media (max-width: 768px) {

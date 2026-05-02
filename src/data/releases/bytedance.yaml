@@ -1,1 +1,112 @@
-[]
+- date: '2024-05-15'
+  vendor: bytedance
+  model: 豆包大模型家族 / Doubao Pro / Doubao Lite
+  description:
+    zh: 火山引擎发布豆包大模型家族,包含 Pro、Lite 等 9 个模型,原名"云雀",日均处理 1200 亿 token 文本。
+    en: Volcano Engine released the Doubao model family (formerly "Skylark") with 9 models including Pro and Lite, processing 120 billion tokens daily.
+  link: https://www.volcengine.com/docs/6360/1264663
+- date: '2024-08-28'
+  vendor: bytedance
+  model: Doubao-pro-32k-240828 / Doubao-pro-128k-240828 / Doubao-lite 系列
+  description:
+    zh: 发布 Doubao-pro-32k、Doubao-pro-128k 及 Doubao-lite 系列更新版本。
+    en: Released updated Doubao-pro-32k, Doubao-pro-128k, and Doubao-lite series models.
+  link: https://www.volcengine.com/docs/82379/1866361
+- date: '2024-12-15'
+  vendor: bytedance
+  model: Doubao-pro-1215 / Doubao-pro-32k-1215
+  description:
+    zh: 发布 Doubao-pro-1215 及 Doubao-pro-32k-1215 更新版本。
+    en: Released Doubao-pro-1215 and Doubao-pro-32k-1215 updated models.
+  link: https://www.volcengine.com/docs/82379/1866361
+- date: '2025-01-23'
+  vendor: bytedance
+  model: 豆包大模型 1.5 / Doubao-1.5-pro / Doubao-1.5-lite
+  description:
+    zh: 发布豆包大模型 1.5,采用稀疏 MoE 架构,Doubao-1.5-pro 在知识、代码、推理等基准上超越 GPT-4o 和 Claude 3.5 Sonnet。
+    en: Released Doubao 1.5 with sparse MoE architecture; Doubao-1.5-pro surpasses GPT-4o and Claude 3.5 Sonnet on knowledge, code, and reasoning benchmarks.
+  link: https://developer.volcengine.com/articles/7462939272262189083
+- date: '2025-01-15'
+  vendor: bytedance
+  model: Doubao-1.5-pro-32k-250115 / Doubao-1.5-lite-32k-250115
+  description:
+    zh: 发布 Doubao-1.5-pro-32k 及 Doubao-1.5-lite-32k 更新版本。
+    en: Released Doubao-1.5-pro-32k and Doubao-1.5-lite-32k updated models.
+  link: https://www.volcengine.com/docs/82379/1866361
+- date: '2025-04-17'
+  vendor: bytedance
+  model: Doubao-1.5-thinking-pro
+  description:
+    zh: 发布推理增强模型 Doubao-1.5-thinking-pro。
+    en: Released the reasoning-enhanced model Doubao-1.5-thinking-pro.
+  link: https://www.volcengine.com/activity/Doubao-thinking
+- date: '2025-06-12'
+  vendor: bytedance
+  model: Doubao-Seed-1.6 / Doubao-Seed-1.6-Thinking
+  description:
+    zh: 发布 Doubao-Seed-1.6 及其推理版本 Doubao-Seed-1.6-Thinking。
+    en: Released Doubao-Seed-1.6 and its reasoning variant Doubao-Seed-1.6-Thinking.
+  link: https://www.volcengine.com/experience/ark?model=doubao-seed-1-6-250615
+- date: '2025-06-15'
+  vendor: bytedance
+  model: Doubao-Seed-1.6-250615 / Doubao-Seed-1.6-Flash-250615
+  description:
+    zh: 发布 Doubao-Seed-1.6 及 Doubao-Seed-1.6-Flash 更新版本。
+    en: Released Doubao-Seed-1.6 and Doubao-Seed-1.6-Flash updated models.
+  link: https://www.volcengine.com/docs/82379/1330310
+- date: '2025-07-15'
+  vendor: bytedance
+  model: Doubao-Seed-1.6-Thinking-250715
+  description:
+    zh: 发布 Doubao-Seed-1.6-Thinking 推理模型更新版本。
+    en: Released updated Doubao-Seed-1.6-Thinking reasoning model.
+  link: https://www.volcengine.com/experience/ark?model=doubao-seed-1-6-thinking-250715
+- date: '2025-08-28'
+  vendor: bytedance
+  model: Doubao-Seed-1.6-Flash-250828
+  description:
+    zh: 发布 Doubao-Seed-1.6-Flash 更新版本。
+    en: Released updated Doubao-Seed-1.6-Flash model.
+  link: https://www.volcengine.com/docs/82379/1330310
+- date: '2025-10-15'
+  vendor: bytedance
+  model: Doubao-Seed-1.6-251015 / Doubao-Seed-1.6-Lite-251015
+  description:
+    zh: 发布 Doubao-Seed-1.6 及 Doubao-Seed-1.6-Lite 更新版本。
+    en: Released Doubao-Seed-1.6 and Doubao-Seed-1.6-Lite updated models.
+  link: https://www.volcengine.com/docs/82379/1330310
+- date: '2025-10-28'
+  vendor: bytedance
+  model: Doubao-Seed-Code-Preview-251028
+  description:
+    zh: 发布代码专用预览模型 Doubao-Seed-Code-Preview。
+    en: Released the code-specialized preview model Doubao-Seed-Code-Preview.
+  link: https://www.volcengine.com/docs/82379/1925114
+- date: '2025-12-15'
+  vendor: bytedance
+  model: Doubao-Seed-1.8-251215
+  description:
+    zh: 发布 Doubao-Seed-1.8 更新版本。
+    en: Released updated Doubao-Seed-1.8 model.
+  link: https://www.volcengine.com/docs/82379/1330310
+- date: '2025-12-28'
+  vendor: bytedance
+  model: Doubao-Seed-1.8-251228
+  description:
+    zh: 发布 Doubao-Seed-1.8 更新版本。
+    en: Released updated Doubao-Seed-1.8 model.
+  link: https://www.volcengine.com/docs/82379/1330310
+- date: '2026-02-14'
+  vendor: bytedance
+  model: Seed2.0 / Doubao-Seed-2.0-Pro / Doubao-Seed-2.0-Lite / Doubao-Seed-2.0-Mini / Doubao-Seed-2.0-Code
+  description:
+    zh: 正式发布 Seed 2.0 系列,包含 Pro、Lite、Mini 通用模型及 Code 专用模型,在 SuperGPQA 上超越 GPT-5.2,获 ICPC/IMO/CMO 金牌。
+    en: Released the Seed 2.0 series with Pro, Lite, Mini general models and Code model, surpassing GPT-5.2 on SuperGPQA and earning gold medals at ICPC, IMO, and CMO.
+  link: https://seed.bytedance.com/zh/blog/seed2-0-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83
+- date: '2026-02-15'
+  vendor: bytedance
+  model: Doubao-Seed-2.0-Pro-260215 / Doubao-Seed-2.0-Lite-260215 / Doubao-Seed-2.0-Mini-260215
+  description:
+    zh: 发布 Doubao-Seed-2.0-Pro、Lite、Mini 更新版本。
+    en: Released Doubao-Seed-2.0-Pro, Lite, and Mini updated models.
+  link: https://www.volcengine.com/docs/82379/1330310

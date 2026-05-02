@@ -1,1 +1,70 @@
-[]
+- date: '2024-01-16'
+  vendor: minimax
+  model: abab6
+  description:
+    zh: MiniMax 发布首个大语言模型 abab6,具备文本理解与生成能力。
+    en: MiniMax released its first large language model abab6, capable of text understanding and generation.
+  link: https://www.minimaxi.com/
+- date: '2024-04-17'
+  vendor: minimax
+  model: abab6.5 / abab6.5s
+  description:
+    zh: 发布万亿参数模型 abab6.5 与高效版本 abab6.5s,均支持 200K token 上下文长度。
+    en: Released the trillion-parameter abab6.5 and efficient variant abab6.5s, both supporting 200K token context length.
+  link: https://www.minimax.io/news/abab65-series
+- date: '2024-11-06'
+  vendor: minimax
+  model: abab7-preview
+  description:
+    zh: 发布 abab7-preview,在长文本处理、数学和写作能力上较 abab6.5 系列显著提升。
+    en: Released abab7-preview with significantly enhanced long-context, math, and writing capabilities over the abab6.5 series.
+  link: https://www.minimax.io/news/abab7-preview-release
+- date: '2025-01-15'
+  vendor: minimax
+  model: MiniMax-Text-01
+  description:
+    zh: 发布 MiniMax-Text-01 文本模型,同步推出多模态模型 MiniMax-VL-01。
+    en: Released MiniMax-Text-01 text model along with the multimodal MiniMax-VL-01.
+  link: https://platform.minimax.io/docs/release-notes/models
+- date: '2025-06-16'
+  vendor: minimax
+  model: MiniMax-M1
+  description:
+    zh: 发布开源混合注意力推理模型 MiniMax-M1,支持 100 万 token 上下文窗口,训练成本仅 $534,700。
+    en: Released the open-source hybrid-attention reasoning model MiniMax-M1 with 1M token context window, trained for just $534,700.
+  link: https://www.minimax.io/news/minimaxm1
+- date: '2025-10-27'
+  vendor: minimax
+  model: MiniMax-M2
+  description:
+    zh: 发布开源 Agent 模型 MiniMax-M2,面向编码与工具调用场景,输入价格仅为 Claude 4.5 Sonnet 的 8%。
+    en: Released the open-source agent model MiniMax-M2 for coding and tool use, priced at just 8% of Claude 4.5 Sonnet.
+  link: https://www.minimax.io/news/minimax-m2
+- date: '2025-12-22'
+  vendor: minimax
+  model: MiniMax-M2.1
+  description:
+    zh: 发布 MiniMax-M2.1 模型。
+    en: Released MiniMax-M2.1 model.
+  link: https://platform.minimax.io/docs/release-notes/models
+- date: '2026-01-27'
+  vendor: minimax
+  model: MiniMax-M2-her
+  description:
+    zh: 发布角色扮演专用模型 MiniMax-M2-her,基于 Talkie/星野平台三年产品经验,在多轮对话一致性与用户偏好对齐上表现突出。
+    en: Released the role-play specialized model MiniMax-M2-her, built on three years of Talkie/Xingye platform experience, excelling in multi-turn consistency and user preference alignment.
+  link: https://www.minimax.io/news/a-deep-dive-into-the-minimax-m2-her-2
+- date: '2026-02-12'
+  vendor: minimax
+  model: MiniMax-M2.5 / MiniMax-M2.5-highspeed
+  description:
+    zh: 发布 MiniMax-M2.5,面向生产力场景优化,在编码(SWE-Bench 80.2%)、搜索(BrowseComp 76.3%)和办公任务上表现突出,提供标准版与高速版。
+    en: Released MiniMax-M2.5 optimized for productivity, excelling in coding (SWE-Bench 80.2%), search (BrowseComp 76.3%), and office tasks, available in standard and high-speed variants.
+  link: https://www.minimax.io/news/minimax-m25
+- date: '2026-03-18'
+  vendor: minimax
+  model: MiniMax-M2.7 / MiniMax-M2.7-highspeed
+  description:
+    zh: 发布 MiniMax-M2.7,首个深度参与自身进化的模型,在 SWE-Pro 达 56.22%,支持多 Agent 协作,提供标准版与高速版。
+    en: Released MiniMax-M2.7, the first model to deeply participate in its own evolution, scoring 56.22% on SWE-Pro with native multi-agent collaboration, available in standard and high-speed variants.
+  link: https://www.minimax.io/news/minimax-m27-en

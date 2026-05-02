@@ -19,94 +19,31 @@
     zh: Pro 模型 12 月迭代,综合能力进一步提升,32K 版本同步更新。
     en: December iteration of Pro models with further capability improvements; 32K variant updated alongside.
   link: https://www.volcengine.com/docs/82379/1866361
-- date: '2025-01-23'
+- date: '2025-01-22'
   vendor: bytedance
-  model: 豆包大模型 1.5 / Doubao-1.5-pro / Doubao-1.5-lite
+  model: Doubao-1.5-pro / Seed1.5
   description:
-    zh: 采用稀疏 MoE 架构的大版本升级,Pro 版在知识、代码、推理基准上超越 GPT-4o 和 Claude 3.5 Sonnet,Lite 版匹敌 GPT-4o-mini。
-    en: Major upgrade with sparse MoE architecture; Pro surpasses GPT-4o and Claude 3.5 Sonnet on knowledge, code, and reasoning; Lite matches GPT-4o-mini.
-  link: https://developer.volcengine.com/articles/7462939272262189083
-- date: '2025-01-15'
+    zh: 采用稀疏 MoE 架构,实现 7 倍性能杠杆,统一视觉-语言-语音框架,在多项基准上超越 GPT-4o,内置深度推理模式。
+    en: Sparse MoE architecture achieving 7x performance leverage with unified vision-language-speech framework, surpassing GPT-4o on multiple benchmarks with built-in deep reasoning mode.
+  link: https://seed.bytedance.com/en/special/doubao_1_5_pro
+- date: '2025-04-14'
   vendor: bytedance
-  model: Doubao-1.5-pro-32k-250115 / Doubao-1.5-lite-32k-250115
+  model: Seed-Thinking-v1.5
   description:
-    zh: 1.5 系列 32K 上下文版本更新,Pro 与 Lite 均获得能力提升。
-    en: 32K context variants of the 1.5 series updated, with capability gains for both Pro and Lite.
-  link: https://www.volcengine.com/docs/82379/1866361
-- date: '2025-04-17'
-  vendor: bytedance
-  model: Doubao-1.5-thinking-pro
-  description:
-    zh: 1.5 系列推理增强版本,内置思维链能力,面向复杂推理与数学任务。
-    en: Reasoning-enhanced variant of the 1.5 series with built-in chain-of-thought for complex reasoning and math tasks.
-  link: https://www.volcengine.com/activity/Doubao-thinking
-- date: '2025-06-12'
-  vendor: bytedance
-  model: Doubao-Seed-1.6 / Doubao-Seed-1.6-Thinking
-  description:
-    zh: 全新 Seed 系列首发,通用版与推理版同步推出,推理版面向多步复杂推理场景。
-    en: Debut of the new Seed series; general and reasoning variants released together, with the reasoning version targeting multi-step complex reasoning.
-  link: https://www.volcengine.com/experience/ark?model=doubao-seed-1-6-250615
+    zh: 推理专用模型,MoE 架构(200B 总参/20B 激活),人类评估超越 DeepSeek R1 约 8%,推理成本降低 50%,采用双轨奖励系统。
+    en: Reasoning-specialized MoE model (200B total / 20B active params), beating DeepSeek R1 by ~8% in human evaluation at 50% lower inference cost, using a dual-track reward system.
+  link: https://seed.bytedance.com/blog/bytedance-s-latest-thinking-model-seed-thinking-v1-5-technical-details-disclosed
 - date: '2025-06-15'
   vendor: bytedance
-  model: Doubao-Seed-1.6-250615 / Doubao-Seed-1.6-Flash-250615
+  model: Doubao-Seed-1.6 / Seed1.6
   description:
-    zh: Seed 1.6 通用版迭代,新增 Flash 轻量高速变体,面向低延迟场景。
-    en: Seed 1.6 general model iteration with new Flash lightweight variant optimized for low-latency use.
-  link: https://www.volcengine.com/docs/82379/1330310
-- date: '2025-07-15'
-  vendor: bytedance
-  model: Doubao-Seed-1.6-Thinking-250715
-  description:
-    zh: Seed 1.6 推理模型迭代,思维链能力进一步增强。
-    en: Updated Seed 1.6 reasoning model with stronger chain-of-thought capabilities.
-  link: https://www.volcengine.com/experience/ark?model=doubao-seed-1-6-thinking-250715
-- date: '2025-08-28'
-  vendor: bytedance
-  model: Doubao-Seed-1.6-Flash-250828
-  description:
-    zh: Seed 1.6 Flash 轻量模型迭代,速度与质量平衡优化。
-    en: Updated Seed 1.6 Flash lightweight model with improved speed-quality balance.
-  link: https://www.volcengine.com/docs/82379/1330310
-- date: '2025-10-15'
-  vendor: bytedance
-  model: Doubao-Seed-1.6-251015 / Doubao-Seed-1.6-Lite-251015
-  description:
-    zh: Seed 1.6 系列新增 Lite 轻量版本,通用版同步更新,进一步降低推理成本。
-    en: Seed 1.6 series gains a Lite variant alongside updated general model, further reducing inference costs.
-  link: https://www.volcengine.com/docs/82379/1330310
-- date: '2025-10-28'
-  vendor: bytedance
-  model: Doubao-Seed-Code-Preview-251028
-  description:
-    zh: Seed 系列代码专用预览版,面向代码生成与理解任务。
-    en: Code-specialized preview model in the Seed series, targeting code generation and understanding tasks.
-  link: https://www.volcengine.com/docs/82379/1925114
-- date: '2025-12-15'
-  vendor: bytedance
-  model: Doubao-Seed-1.8-251215
-  description:
-    zh: Seed 1.8 系列首发,通用能力全面升级。
-    en: Debut of the Seed 1.8 series with across-the-board general capability improvements.
-  link: https://www.volcengine.com/docs/82379/1330310
-- date: '2025-12-28'
-  vendor: bytedance
-  model: Doubao-Seed-1.8-251228
-  description:
-    zh: Seed 1.8 模型迭代更新,推理与指令遵循能力提升。
-    en: Updated Seed 1.8 model with improved reasoning and instruction-following.
-  link: https://www.volcengine.com/docs/82379/1330310
+    zh: Seed 系列第三代通用模型,综合能力全面提升。
+    en: Third-generation general model in the Seed series with across-the-board capability improvements.
+  link: https://seed.bytedance.com/en/models
 - date: '2026-02-14'
   vendor: bytedance
-  model: Seed2.0 / Doubao-Seed-2.0-Pro / Doubao-Seed-2.0-Lite / Doubao-Seed-2.0-Mini / Doubao-Seed-2.0-Code
+  model: Seed2.0 / Seed2.0 Pro / Seed2.0 Lite / Seed2.0 Mini / Seed2.0 Code
   description:
-    zh: 第二代 Seed 系列,含 Pro、Lite、Mini 通用模型及 Code 代码模型,在 SuperGPQA 上超越 GPT-5.2,获 ICPC、IMO、CMO 数学竞赛金牌。
-    en: Second-generation Seed series with Pro, Lite, Mini general models and Code model; surpasses GPT-5.2 on SuperGPQA, earns gold medals at ICPC, IMO, and CMO.
-  link: https://seed.bytedance.com/zh/blog/seed2-0-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83
-- date: '2026-02-15'
-  vendor: bytedance
-  model: Doubao-Seed-2.0-Pro-260215 / Doubao-Seed-2.0-Lite-260215 / Doubao-Seed-2.0-Mini-260215
-  description:
-    zh: Seed 2.0 系列首次迭代,Pro、Lite、Mini 三版本同步更新。
-    en: First iteration of the Seed 2.0 series; Pro, Lite, and Mini updated simultaneously.
-  link: https://www.volcengine.com/docs/82379/1330310
+    zh: 第二代通用 Agent 模型系列,Pro 版专注长链推理与复杂工作流,Lite 版平衡质量与速度,Mini 版优化推理吞吐与部署密度,Code 版面向代码场景,在 SuperGPQA 上超越 GPT-5.2。
+    en: Second-generation general Agent model family; Pro for long-chain reasoning and complex workflows, Lite balancing quality and speed, Mini optimizing throughput and density, Code for coding tasks, surpassing GPT-5.2 on SuperGPQA.
+  link: https://seed.bytedance.com/zh/seed2

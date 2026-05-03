@@ -38,6 +38,15 @@ function parseArgs(): CliArgs {
       result.limit = parseInt(arg.slice('--limit='.length), 10);
     }
   }
+
+  // Also read from env vars (used by GitHub Actions)
+  if (!result.vendors && process.env.COLLECTOR_VENDORS) {
+    result.vendors = process.env.COLLECTOR_VENDORS.split(',').map((s) => s.trim()).filter(Boolean);
+  }
+  if (process.env.COLLECTOR_BOOTSTRAP === 'true') {
+    result.bootstrap = true;
+  }
+
   return result;
 }
 

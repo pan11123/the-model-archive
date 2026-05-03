@@ -5,19 +5,43 @@ import type { Candidate } from '../types.js';
 
 const RELEASES_DIR = path.resolve(process.cwd(), 'src/data/releases');
 
-export function writeCandidatesToYaml(candidates: Candidate[]): void {
+function getExistingKeys(filePath: string): Set<string> {
+  const doc = YAML.parseDocument(readFileSync(filePath, 'utf8'));
+  const items = doc.contents as YAML.YAMLSeq;
+  const keys = new Set<string>();
+  for (const item of items.items as YAML.YAMLMap[]) {
+    const date = item.get('date') as string;
+    const vendor = item.get('vendor') as string;
+    const model = item.get('model') as string;
+    keys.add(`${vendor}|${model}|${date}`);
+  }
+  return keys;
+}
+
+export function writeCandidatesToYaml(candidates: Candidate[]): { written: number; skipped: number } {
   const byVendor = new Map<string, Candidate[]>();
   for (const c of candidates) {
     if (!byVendor.has(c.vendor)) byVendor.set(c.vendor, []);
     byVendor.get(c.vendor)!.push(c);
   }
 
+  let written = 0;
+  let skipped = 0;
+
   for (const [vendor, vendorCandidates] of byVendor) {
     const filePath = path.join(RELEASES_DIR, `${vendor}.yaml`);
     const doc = YAML.parseDocument(readFileSync(filePath, 'utf8'));
     const items = doc.contents as YAML.YAMLSeq;
+    const existingKeys = getExistingKeys(filePath);
 
     for (const candidate of vendorCandidates) {
+      const key = `${candidate.vendor}|${candidate.extraction.model}|${candidate.extraction.releaseDate}`;
+      if (existingKeys.has(key)) {
+        console.log(`  ⏭️ skipping duplicate: ${key}`);
+        skipped++;
+        continue;
+      }
+
       const node = doc.createNode({
         date: candidate.extraction.releaseDate!,
         vendor: candidate.vendor,
@@ -29,6 +53,8 @@ export function writeCandidatesToYaml(candidates: Candidate[]): void {
         link: candidate.url,
       });
       insertByDate(items, node);
+      existingKeys.add(key);
+      written++;
     }
 
     writeFileSync(filePath, doc.toString({
@@ -37,6 +63,8 @@ export function writeCandidatesToYaml(candidates: Candidate[]): void {
       defaultKeyType: 'PLAIN',
     }), 'utf8');
   }
+
+  return { written, skipped };
 }
 
 function insertByDate(items: YAML.YAMLSeq, node: YAML.YAMLMap): void {

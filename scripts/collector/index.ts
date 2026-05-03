@@ -210,7 +210,9 @@ async function runCollect(args: CliArgs): Promise<void> {
     const highAndMedium = summary.candidates.filter((c) => c.extraction.confidence >= 0.7 && c.extraction.isRelease);
     if (highAndMedium.length > 0) {
       console.log(`\nWriting ${highAndMedium.length} candidates to YAML...`);
-      writeCandidatesToYaml(highAndMedium);
+      const { written, skipped } = writeCandidatesToYaml(highAndMedium);
+      summary.written = written;
+      summary.skipped += skipped;
 
       try {
         const { loadAll } = await import(path.resolve(process.cwd(), 'src/lib/loadData.ts'));

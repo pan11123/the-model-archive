@@ -9,7 +9,7 @@ export async function fetchArticle(url: string): Promise<FetchedArticle> {
       const browser = await chromium.launch({ headless: true });
       try {
         const page = await browser.newPage();
-        await page.goto(url, { waitUntil: 'networkidle', timeout: 30000 });
+        await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
         const title = await page.title();
         const html = await page.content();
         const plainText = htmlToText(html);

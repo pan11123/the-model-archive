@@ -12,6 +12,45 @@ Edit `src/data/releases/<vendor>.yaml` (one file per vendor; create the file by 
 - `description.zh` / `description.en`: one-line
 - `link`: official announcement URL (must be https)
 
+## Collector (auto-discover new releases)
+
+A semi-automatic collector that monitors vendor blogs/RSS, extracts release info via LLM (DeepSeek), and opens PRs for human review.
+
+### Supported vendors
+
+| Vendor | Source | Type |
+|---|---|---|
+| openai | openai.com/news/rss.xml | RSS |
+| anthropic | anthropic.com/news | list |
+| google | blog.google AI RSS | RSS |
+| deepseek | api-docs.deepseek.com sitemap | sitemap |
+| alibaba | qwenlm.github.io/blog | list |
+| moonshot | kimi.com/blog | list |
+| minimax | minimaxi.com/news | list |
+
+Deferred: xai (Cloudflare), bytedance (JS-rendered).
+
+### Setup
+
+1. Get a DeepSeek API key: https://platform.deepseek.com/
+2. Add as GitHub Secret: `DEEPSEEK_API_KEY`
+3. Enable Actions permissions: Settings → Actions → Read and write + Allow PR creation
+
+### Local usage
+
+```bash
+export DEEPSEEK_API_KEY="your-key"
+
+npm run collect:health                      # check endpoints
+npm run collect:dry -- --vendors=deepseek   # dry run
+npm run collect -- --vendors=deepseek       # real run
+npm run collect:bootstrap -- --vendors=openai  # mark existing URLs as seen
+```
+
+### CI
+
+`.github/workflows/collect.yml` runs daily at 02:00 UTC. It discovers new releases, writes candidates to YAML, and opens a PR for review. Manual trigger available via `workflow_dispatch`.
+
 ## Local
 
 ```bash

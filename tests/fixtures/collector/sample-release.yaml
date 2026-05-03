@@ -1,0 +1,14 @@
+- date: '2025-01-01'
+  vendor: testvendor
+  model: TestModel 1
+  description:
+    zh: 测试模型一
+    en: Test model one
+  link: https://example.com/test1
+- date: '2025-06-01'
+  vendor: testvendor
+  model: TestModel 2
+  description:
+    zh: 测试模型二
+    en: Test model two
+  link: https://example.com/test2

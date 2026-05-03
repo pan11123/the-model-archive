@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Test AI Blog</title>
+    <link>https://example.com</link>
+    <item>
+      <title>New Model Released: TestLLM 3</title>
+      <link>https://example.com/blog/testllm-3</link>
+      <pubDate>Mon, 01 Jan 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Safety Report 2026</title>
+      <link>https://example.com/blog/safety-report</link>
+      <pubDate>Tue, 02 Jan 2026 00:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

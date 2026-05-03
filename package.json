@@ -12,7 +12,11 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "npm run build && playwright test",
-    "astro": "astro"
+    "astro": "astro",
+    "collect": "tsx scripts/collector/index.ts",
+    "collect:health": "tsx scripts/collector/index.ts --health-check",
+    "collect:dry": "tsx scripts/collector/index.ts --dry-run",
+    "collect:bootstrap": "tsx scripts/collector/index.ts --bootstrap"
   },
   "dependencies": {
     "astro": "^6.1.9"
@@ -22,8 +26,13 @@
     "@types/js-yaml": "^4.0.9",
     "@vitest/ui": "^4.1.5",
     "js-yaml": "^4.1.1",
+    "openai": "^6.35.0",
     "playwright": "^1.59.1",
+    "rss-parser": "^3.13.0",
+    "tsx": "^4.21.0",
+    "turndown": "^7.2.4",
     "vitest": "^4.1.5",
+    "yaml": "^2.8.4",
     "zod": "^4.3.6"
   }
 }

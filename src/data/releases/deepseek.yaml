@@ -89,6 +89,13 @@
     zh: 开源推理模型系列,R1-Zero 纯强化学习训练,R1 引入冷启动,Distill 蒸馏至小模型。
     en: Open-source reasoning family; R1-Zero trained with pure RL, R1 with cold-start, Distill for smaller models.
   link: https://api-docs.deepseek.com/news/news250120
+- date: 2025-01-20
+  vendor: deepseek
+  model: DeepSeek-R1
+  description:
+    zh: DeepSeek-R1正式发布，性能媲美OpenAI-o1，完全开源并采用MIT许可，支持蒸馏与商用。
+    en: DeepSeek-R1 launches with performance on par with OpenAI-o1, fully open-sourced under MIT license for distillation and commercial use.
+  link: https://api-docs.deepseek.com/news/news250120
 - date: '2025-03-24'
   vendor: deepseek
   model: DeepSeek-V3-0324
@@ -96,6 +103,13 @@
     zh: V3 升级版,数学与编程基准大幅提升,前端网页生成与中文写作显著优化。
     en: V3 upgrade with major math and coding gains; significantly improved front-end code generation and Chinese writing.
   link: https://api-docs.deepseek.com/updates
+- date: 2025-03-25
+  vendor: deepseek
+  model: DeepSeek-V3-0324
+  description:
+    zh: 推理性能大幅提升，前端开发能力更强，工具使用更智能，采用MIT许可证开源。
+    en: Major boost in reasoning, stronger front-end dev, smarter tool-use, MIT license.
+  link: https://api-docs.deepseek.com/news/news250325
 - date: '2025-04-30'
   vendor: deepseek
   model: DeepSeek-Prover-V2
@@ -150,6 +164,5 @@
   model: DeepSeek-V4-Pro / DeepSeek-V4-Flash
   description:
     zh: 第四代模型,V4-Pro 1.6T 参数比肩顶级闭源模型,V4-Flash 轻量高效,默认支持 1M 上下文。
-    en: Fourth-generation models; V4-Pro at 1.6T rivals top closed-source models, V4-Flash is lightweight and efficient,
-      both with default 1M context.
+    en: Fourth-generation models; V4-Pro at 1.6T rivals top closed-source models, V4-Flash is lightweight and efficient, both with default 1M context.
   link: https://api-docs.deepseek.com/news/news260424

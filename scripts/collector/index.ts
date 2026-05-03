@@ -206,13 +206,18 @@ async function runCollect(args: CliArgs): Promise<void> {
     updateLastRun(state, adapter.id);
   }
 
+  let writtenCandidates: Candidate[] = [];
+  let skippedCandidates: Candidate[] = [];
+
   if (!args.dryRun) {
     const highAndMedium = summary.candidates.filter((c) => c.extraction.confidence >= 0.7 && c.extraction.isRelease);
     if (highAndMedium.length > 0) {
       console.log(`\nWriting ${highAndMedium.length} candidates to YAML...`);
-      const { written, skipped } = writeCandidatesToYaml(highAndMedium);
-      summary.written = written;
-      summary.skipped += skipped;
+      const result = writeCandidatesToYaml(highAndMedium);
+      writtenCandidates = result.written;
+      skippedCandidates = result.skipped;
+      summary.written = writtenCandidates.length;
+      summary.skipped += skippedCandidates.length;
 
       try {
         const { loadAll } = await import(path.resolve(process.cwd(), 'src/lib/loadData.ts'));
@@ -231,7 +236,7 @@ async function runCollect(args: CliArgs): Promise<void> {
     console.log('\n[dry-run] Skipping YAML write and state save');
   }
 
-  const prBody = generatePrBody(summary);
+  const prBody = generatePrBody(summary, writtenCandidates, skippedCandidates);
   writeFileSync(PR_BODY_PATH, prBody, 'utf8');
   console.log(`\nPR body written to ${PR_BODY_PATH}`);
 

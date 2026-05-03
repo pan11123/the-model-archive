@@ -18,15 +18,15 @@ function getExistingKeys(filePath: string): Set<string> {
   return keys;
 }
 
-export function writeCandidatesToYaml(candidates: Candidate[]): { written: number; skipped: number } {
+export function writeCandidatesToYaml(candidates: Candidate[]): { written: Candidate[]; skipped: Candidate[] } {
   const byVendor = new Map<string, Candidate[]>();
   for (const c of candidates) {
     if (!byVendor.has(c.vendor)) byVendor.set(c.vendor, []);
     byVendor.get(c.vendor)!.push(c);
   }
 
-  let written = 0;
-  let skipped = 0;
+  const written: Candidate[] = [];
+  const skipped: Candidate[] = [];
 
   for (const [vendor, vendorCandidates] of byVendor) {
     const filePath = path.join(RELEASES_DIR, `${vendor}.yaml`);
@@ -38,7 +38,7 @@ export function writeCandidatesToYaml(candidates: Candidate[]): { written: numbe
       const key = `${candidate.vendor}|${candidate.extraction.model}|${candidate.extraction.releaseDate}`;
       if (existingKeys.has(key)) {
         console.log(`  ⏭️ skipping duplicate: ${key}`);
-        skipped++;
+        skipped.push(candidate);
         continue;
       }
 
@@ -54,7 +54,7 @@ export function writeCandidatesToYaml(candidates: Candidate[]): { written: numbe
       });
       insertByDate(items, node);
       existingKeys.add(key);
-      written++;
+      written.push(candidate);
     }
 
     writeFileSync(filePath, doc.toString({

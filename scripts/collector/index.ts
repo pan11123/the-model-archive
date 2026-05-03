@@ -76,6 +76,14 @@ function applyHints(items: DiscoveredItem[], adapter: VendorAdapter): Discovered
     filtered = filtered.filter((item) => adapter.urlFilter!(item.url));
   }
 
+  if (adapter.releaseHints?.titleKeywords?.length) {
+    const keywords = adapter.releaseHints.titleKeywords;
+    filtered = filtered.filter((item) => {
+      const lower = item.title.toLowerCase();
+      return keywords.some((kw) => lower.includes(kw.toLowerCase()));
+    });
+  }
+
   if (adapter.releaseHints?.excludeKeywords?.length) {
     const excluded = adapter.releaseHints.excludeKeywords;
     filtered = filtered.filter((item) => {

@@ -1,4 +1,20 @@
 {
   "version": 1,
-  "vendors": {}
+  "vendors": {
+    "deepseek": {
+      "seenUrls": [
+        "https://api-docs.deepseek.com/news/news0725",
+        "https://api-docs.deepseek.com/news/news0802",
+        "https://api-docs.deepseek.com/news/news0905",
+        "https://api-docs.deepseek.com/news/news1120",
+        "https://api-docs.deepseek.com/news/news1210",
+        "https://api-docs.deepseek.com/news/news1226",
+        "https://api-docs.deepseek.com/news/news250115",
+        "https://api-docs.deepseek.com/news/news250120",
+        "https://api-docs.deepseek.com/news/news250325",
+        "https://api-docs.deepseek.com/news/news250528"
+      ],
+      "lastRun": "2026-05-03T11:43:38.188Z"
+    }
+  }
 }

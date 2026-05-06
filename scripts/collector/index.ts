@@ -218,7 +218,9 @@ async function runCollect(args: CliArgs): Promise<void> {
   let skippedCandidates: Candidate[] = [];
 
   if (!args.dryRun) {
-    const highAndMedium = summary.candidates.filter((c) => c.extraction.confidence >= 0.7 && c.extraction.isRelease);
+    const highAndMedium = summary.candidates.filter(
+      (c) => c.extraction.confidence >= 0.7 && c.extraction.isRelease && c.extraction.releaseDate != null && c.extraction.model != null,
+    );
     if (highAndMedium.length > 0) {
       console.log(`\nWriting ${highAndMedium.length} candidates to YAML...`);
       const result = writeCandidatesToYaml(highAndMedium);

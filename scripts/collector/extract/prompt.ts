@@ -17,7 +17,7 @@ export function buildSystemPrompt(): string {
   "isRelease": true/false,
   "confidence": 0.0-1.0,
   "model": "模型名或null",
-  "releaseDate": "YYYY-MM-DD或null",
+  "releaseDate": "YYYY-MM-DD格式字符串，无法确定则返回JSON null值",
   "descriptionZh": "中文描述",
   "descriptionEn": "English description",
   "reasoning": "判断理由"

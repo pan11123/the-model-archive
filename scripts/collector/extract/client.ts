@@ -4,6 +4,22 @@ import { extractionJsonSchema } from './schema.js';
 import { buildSystemPrompt, buildUserPrompt } from './prompt.js';
 import { withRetry } from '../lib/retry.js';
 
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+
+function normalizeDate(value: unknown): string | null {
+  if (typeof value !== 'string') return null;
+  const trimmed = value.trim();
+  if (!trimmed || trimmed.toLowerCase() === 'null') return null;
+  return DATE_RE.test(trimmed) ? trimmed : null;
+}
+
+function normalizeNullable(value: unknown): string | null {
+  if (typeof value !== 'string') return null;
+  const trimmed = value.trim();
+  if (!trimmed || trimmed.toLowerCase() === 'null') return null;
+  return trimmed;
+}
+
 const DEEPSEEK_BASE_URL = 'https://api.deepseek.com';
 
 function getClient(): OpenAI {
@@ -45,8 +61,8 @@ export async function extractRelease(opts: {
       return {
         isRelease: Boolean(parsed.isRelease),
         confidence: Number(parsed.confidence),
-        model: parsed.model ?? null,
-        releaseDate: parsed.releaseDate ?? null,
+        model: normalizeNullable(parsed.model),
+        releaseDate: normalizeDate(parsed.releaseDate),
         descriptionZh: String(parsed.descriptionZh ?? ''),
         descriptionEn: String(parsed.descriptionEn ?? ''),
         reasoning: String(parsed.reasoning ?? ''),

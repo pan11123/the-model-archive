@@ -4,6 +4,7 @@ import YAML from 'yaml';
 import type { Candidate } from '../types.js';
 
 const RELEASES_DIR = path.resolve(process.cwd(), 'src/data/releases');
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 
 function getExistingKeys(filePath: string): Set<string> {
   const doc = YAML.parseDocument(readFileSync(filePath, 'utf8'));
@@ -35,6 +36,11 @@ export function writeCandidatesToYaml(candidates: Candidate[]): { written: Candi
     const existingKeys = getExistingKeys(filePath);
 
     for (const candidate of vendorCandidates) {
+      if (candidate.extraction.releaseDate == null || candidate.extraction.model == null || !DATE_RE.test(candidate.extraction.releaseDate)) {
+        console.log(`  ⏭️ skipping candidate with null/invalid date or null model: ${candidate.url} (date=${candidate.extraction.releaseDate})`);
+        skipped.push(candidate);
+        continue;
+      }
       const key = `${candidate.vendor}|${candidate.extraction.model}|${candidate.extraction.releaseDate}`;
       if (existingKeys.has(key)) {
         console.log(`  ⏭️ skipping duplicate: ${key}`);
@@ -43,9 +49,9 @@ export function writeCandidatesToYaml(candidates: Candidate[]): { written: Candi
       }
 
       const node = doc.createNode({
-        date: candidate.extraction.releaseDate!,
+        date: candidate.extraction.releaseDate,
         vendor: candidate.vendor,
-        model: candidate.extraction.model!,
+        model: candidate.extraction.model,
         description: {
           zh: candidate.extraction.descriptionZh,
           en: candidate.extraction.descriptionEn,

@@ -68,3 +68,10 @@
     zh: 首个深度参与自身进化的模型,通过自主优化循环实现 30% 性能提升,SWE-Pro 达 56.22%,原生支持多 Agent 协作。
     en: First model to deeply participate in its own evolution, achieving 30% improvement through autonomous optimization loops; 56.22% on SWE-Pro with native multi-agent collaboration.
   link: https://www.minimax.io/news/minimax-m27-en
+- date: 2026-05-07
+  vendor: minimax
+  model: MiniMax Speech 2.8
+  description:
+    zh: MiniMax Speech 2.8 语音模型发布，赋予AI语音更自然的情感表达，提升交互温度。
+    en: MiniMax Speech 2.8 voice model brings natural emotion and warmth to AI speech.
+  link: https://www.minimaxi.com/news/minimax-speech-28

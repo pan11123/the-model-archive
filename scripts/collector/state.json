@@ -14,7 +14,80 @@
         "https://api-docs.deepseek.com/news/news250325",
         "https://api-docs.deepseek.com/news/news250528"
       ],
-      "lastRun": "2026-05-03T12:09:22.603Z"
+      "lastRun": "2026-05-07T05:28:03.227Z"
+    },
+    "openai": {
+      "seenUrls": [
+        "https://openai.com/index/introducing-chatgpt-futures-class-of-2026",
+        "https://openai.com/index/singular-bank",
+        "https://openai.com/index/gpt-5-5-instant",
+        "https://openai.com/index/gpt-5-5-instant-system-card",
+        "https://openai.com/index/new-ways-to-buy-chatgpt-ads",
+        "https://openai.com/index/openai-on-aws",
+        "https://openai.com/index/gpt-5-5-system-card",
+        "https://openai.com/index/introducing-gpt-5-5",
+        "https://openai.com/index/gpt-5-5-bio-bug-bounty",
+        "https://openai.com/index/making-chatgpt-better-for-clinicians"
+      ],
+      "lastRun": "2026-05-07T05:27:12.947Z"
+    },
+    "anthropic": {
+      "seenUrls": [
+        "https://www.anthropic.com/news/claude-opus-4-7",
+        "https://www.anthropic.com/news/claude-design-anthropic-labs",
+        "https://www.anthropic.com/news/claude-is-a-space-to-think",
+        "https://www.anthropic.com/news/higher-limits-spacex",
+        "https://www.anthropic.com/news/finance-agents",
+        "https://www.anthropic.com/news/enterprise-ai-services-company",
+        "https://www.anthropic.com/news/claude-for-creative-work",
+        "https://www.anthropic.com/news/theo-hourmouzis-general-manager-australia-new-zealand",
+        "https://www.anthropic.com/news/anthropic-nec",
+        "https://www.anthropic.com/news/anthropic-amazon-compute"
+      ],
+      "lastRun": "2026-05-07T05:27:48.407Z"
+    },
+    "google": {
+      "seenUrls": [
+        "https://blog.google/innovation-and-ai/technology/developers-tools/event-driven-webhooks/",
+        "https://blog.google/products-and-platforms/products/gemini/gemini-spring-cleaning-tips/",
+        "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/",
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts/",
+        "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/"
+      ],
+      "lastRun": "2026-05-07T05:28:02.224Z"
+    },
+    "alibaba": {
+      "seenUrls": [],
+      "lastRun": "2026-05-07T05:28:04.130Z"
+    },
+    "zhipu": {
+      "seenUrls": [],
+      "lastRun": "2026-05-07T05:28:10.798Z"
+    },
+    "moonshot": {
+      "seenUrls": [
+        "https://www.kimi.com/blog/kimi-k2-6",
+        "https://www.kimi.com/blog/kimi-k2-5",
+        "https://www.kimi.com/blog/kimi-vendor-verifier",
+        "https://www.kimi.com/blog/kimi-k2-thinking",
+        "https://www.kimi.com/blog/kimi-k2"
+      ],
+      "lastRun": "2026-05-07T05:29:01.055Z"
+    },
+    "minimax": {
+      "seenUrls": [
+        "https://www.minimaxi.com/news/minimax-m2-her-技术深度解析",
+        "https://www.minimaxi.com/news/minimax-m21",
+        "https://www.minimaxi.com/news/minimax-m2",
+        "https://www.minimaxi.com/news/minimax-speech-28",
+        "https://www.minimaxi.com/news/minimax-speech-26",
+        "https://www.minimaxi.com/news/minimax-speech-25",
+        "https://www.minimaxi.com/news/minimax-hailuo-23",
+        "https://www.minimaxi.com/news/minimax-hailuo-02",
+        "https://www.minimaxi.com/news/music-26",
+        "https://www.minimaxi.com/news/music-25-解锁纯音乐突破风格边界"
+      ],
+      "lastRun": "2026-05-07T05:29:42.433Z"
     }
   }
 }

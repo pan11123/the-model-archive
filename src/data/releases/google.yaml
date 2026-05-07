@@ -110,3 +110,17 @@
     zh: Gemini 3 系列最快最省型号,比 2.5 Flash 快 2.5 倍,输出速度提升 45%。
     en: Fastest and most cost-efficient Gemini 3 model, 2.5x faster TTFT than 2.5 Flash with 45% higher output speed.
   link: https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite/
+- date: 2026-04-15
+  vendor: google
+  model: Gemini 3.1 Flash TTS
+  description:
+    zh: 谷歌发布Gemini 3.1 Flash TTS，新一代文本转语音模型，支持更自然的语音合成。
+    en: Google launches Gemini 3.1 Flash TTS, a new text-to-speech model with expressive speech synthesis.
+  link: https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts/
+- date: 2026-04-16
+  vendor: google
+  model: Nano Banana 2
+  description:
+    zh: Nano Banana 2 利用个人上下文和 Google Photos 生成个性化图像。
+    en: Nano Banana 2 uses personal context and Google Photos to create personalized images.
+  link: https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/

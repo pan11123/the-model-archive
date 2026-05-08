@@ -8,7 +8,10 @@ const adapter: VendorAdapter = {
     linkSelector: 'a[href*="/news"]',
     linkPrefix: 'https://www.zhipuai.cn',
   },
-  releaseHints: { titleKeywords: ['glm', 'chatglm', 'cogview', 'cogvideo'] },
+  releaseHints: {
+    titleKeywords: ['glm', 'chatglm'],
+    excludeKeywords: ['cogview', 'cogvideo', 'cogaudio', 'video', 'image generation', 'tts', 'speech'],
+  },
 };
 
 export default adapter;

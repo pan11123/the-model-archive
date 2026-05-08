@@ -8,7 +8,10 @@ const adapter: VendorAdapter = {
     linkSelector: 'a[href*="/news"]',
     linkPrefix: 'https://www.minimaxi.com',
   },
-  releaseHints: { titleKeywords: ['minimax', 'abab', 'hailuo'] },
+  releaseHints: {
+    titleKeywords: ['minimax', 'abab'],
+    excludeKeywords: ['speech', 'tts', 'hailuo', 'video', 'audio', 'music'],
+  },
 };
 
 export default adapter;

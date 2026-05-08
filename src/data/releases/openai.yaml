@@ -166,3 +166,10 @@
     zh: 迄今最聪明的模型,编程、研究与跨工具数据分析能力进一步强化。
     en: Smartest model yet, with stronger coding, research, and cross-tool data analysis.
   link: https://openai.com/index/introducing-gpt-5-5/
+- date: '2026-05-05'
+  vendor: openai
+  model: GPT-5.5 Instant
+  description:
+    zh: GPT-5.5 Instant 发布，更智能、更清晰、更个性化。
+    en: GPT-5.5 Instant launched — smarter, clearer, and more personalized.
+  link: https://openai.com/index/gpt-5-5-instant

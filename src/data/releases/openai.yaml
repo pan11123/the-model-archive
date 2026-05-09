@@ -173,3 +173,10 @@
     zh: GPT-5.5 Instant 发布，更智能、更清晰、更个性化。
     en: GPT-5.5 Instant launched — smarter, clearer, and more personalized.
   link: https://openai.com/index/gpt-5-5-instant
+- date: 2026-05-07
+  vendor: openai
+  model: GPT-5.5
+  description:
+    zh: OpenAI发布GPT-5.5及网络安全专用版GPT-5.5-Cyber，提升可信访问能力。
+    en: OpenAI launches GPT-5.5 and GPT-5.5-Cyber for trusted access in cybersecurity.
+  link: https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber

@@ -4,11 +4,17 @@ export function buildSystemPrompt(): string {
 
 判断标准：
 - ✅ 视为发布：宣布一个新的大语言模型（LLM）/新版本上线，含模型名（如 GPT-5、Claude 4.7、Gemini 2.5 Pro、Qwen、DeepSeek）
+- ✅ 视为发布：同一基础模型的专用变体（如 GPT-5.5-Cyber、Claude 4.7 Haiku、Gemini 2.5 Flash-Lite）也算新发布
 - ❌ 不视为发布：安全报告、研究论文、政策更新、产品功能更新（非模型本体）、
   现有模型的 benchmark 文章、招聘公告、博客回顾
 - ❌ 不视为发布：音视频模型、语音合成/识别模型（TTS、STT、Speech）、
   图像生成模型（如 DALL·E、Imagen、CogView）、视频生成模型（如 Sora、Veo、CogVideo、Hailuo）、
   音乐生成模型。只收录大语言模型（LLM）。
+
+模型名提取规则：
+- 必须使用文章中宣布的完整模型名，包括所有变体后缀（如 "-Cyber"、"-Instant"、"-Mini"、"Pro"、"Flash" 等）
+- 不要将变体名归一化为基础模型名。例如文章提到 "GPT-5.5-Cyber"，必须提取 "GPT-5.5-Cyber"，不能写成 "GPT-5.5"
+- 基础模型和变体是不同的模型，各自独立收录
 
 中文描述要求：50 字以内，简洁陈述模型亮点。
 英文描述要求：25 词以内，与中文描述对应（不是机翻，是同一意思的两种自然表达）。

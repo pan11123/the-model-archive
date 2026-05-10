@@ -19,6 +19,16 @@ function getExistingKeys(filePath: string): Set<string> {
   return keys;
 }
 
+function getExistingModels(filePath: string): string[] {
+  const doc = YAML.parseDocument(readFileSync(filePath, 'utf8'));
+  const items = doc.contents as YAML.YAMLSeq;
+  const models: string[] = [];
+  for (const item of items.items as YAML.YAMLMap[]) {
+    models.push((item.get('model') as string).toLowerCase());
+  }
+  return models;
+}
+
 export function writeCandidatesToYaml(candidates: Candidate[]): { written: Candidate[]; skipped: Candidate[] } {
   const byVendor = new Map<string, Candidate[]>();
   for (const c of candidates) {
@@ -34,6 +44,7 @@ export function writeCandidatesToYaml(candidates: Candidate[]): { written: Candi
     const doc = YAML.parseDocument(readFileSync(filePath, 'utf8'));
     const items = doc.contents as YAML.YAMLSeq;
     const existingKeys = getExistingKeys(filePath);
+    const existingModels = getExistingModels(filePath);
 
     for (const candidate of vendorCandidates) {
       if (candidate.extraction.releaseDate == null || candidate.extraction.model == null || !DATE_RE.test(candidate.extraction.releaseDate)) {
@@ -46,6 +57,10 @@ export function writeCandidatesToYaml(candidates: Candidate[]): { written: Candi
         console.log(`  ⏭️ skipping duplicate: ${key}`);
         skipped.push(candidate);
         continue;
+      }
+      // Warn if model name matches an existing entry (different date) — LLM may have normalized a variant name
+      if (existingModels.includes(candidate.extraction.model.toLowerCase())) {
+        console.log(`  ⚠️ model "${candidate.extraction.model}" already exists with a different date — LLM may have normalized a variant name, check URL: ${candidate.url}`);
       }
 
       const node = doc.createNode({

@@ -10,8 +10,8 @@
   name: { zh: Google, en: Google }
   color: "#4285f4"
   website: https://deepmind.google
-- id: xai
-  name: { zh: xAI, en: xAI }
+- id: spacexai
+  name: { zh: SpaceXAI, en: SpaceXAI }
   color: "#8b8fa3"
   website: https://x.ai
 - id: deepseek

@@ -159,6 +159,13 @@
     zh: GPT-5.4 的精简版,针对编程、工具调用与高吞吐 API 场景优化。
     en: Smaller, faster GPT-5.4 variants tuned for coding, tool use, and high-volume API workloads.
   link: https://openai.com/index/introducing-gpt-5-4-mini-and-nano/
+- date: 2026-04-16
+  vendor: openai
+  model: GPT-Rosalind
+  description:
+    zh: OpenAI推出专为生命科学研究的GPT-Rosalind模型，助力科研。
+    en: OpenAI launches GPT-Rosalind, a model tailored for life sciences research.
+  link: https://openai.com/index/introducing-gpt-rosalind
 - date: '2026-04-23'
   vendor: openai
   model: GPT-5.5

@@ -14,7 +14,7 @@
         "https://api-docs.deepseek.com/news/news250325",
         "https://api-docs.deepseek.com/news/news250528"
       ],
-      "lastRun": "2026-05-12T05:34:43.527Z"
+      "lastRun": "2026-05-14T05:43:31.843Z"
     },
     "openai": {
       "seenUrls": [
@@ -37,9 +37,19 @@
         "https://openai.com/index/introducing-chatgpt-images-2-0",
         "https://openai.com/index/introducing-gpt-rosalind",
         "https://openai.com/index/cyberagent",
-        "https://openai.com/index/our-approach-to-the-model-spec"
+        "https://openai.com/index/our-approach-to-the-model-spec",
+        "https://openai.com/index/powering-product-discovery-in-chatgpt",
+        "https://openai.com/index/introducing-gpt-5-4-mini-and-nano",
+        "https://openai.com/index/equip-responses-api-computer-environment",
+        "https://openai.com/index/new-ways-to-learn-math-and-science-in-chatgpt",
+        "https://openai.com/index/gpt-5-4-thinking-system-card",
+        "https://openai.com/index/introducing-gpt-5-4",
+        "https://openai.com/index/reasoning-models-chain-of-thought-controllability",
+        "https://openai.com/index/chatgpt-for-excel",
+        "https://openai.com/index/the-five-ai-value-models-driving-business-reinvention",
+        "https://openai.com/index/vfl-wolfsburg"
       ],
-      "lastRun": "2026-05-12T05:34:40.352Z"
+      "lastRun": "2026-05-14T05:43:19.276Z"
     },
     "anthropic": {
       "seenUrls": [
@@ -52,9 +62,10 @@
         "https://www.anthropic.com/news/claude-for-creative-work",
         "https://www.anthropic.com/news/theo-hourmouzis-general-manager-australia-new-zealand",
         "https://www.anthropic.com/news/anthropic-nec",
-        "https://www.anthropic.com/news/anthropic-amazon-compute"
+        "https://www.anthropic.com/news/anthropic-amazon-compute",
+        "https://www.anthropic.com/news/claude-for-small-business"
       ],
-      "lastRun": "2026-05-12T05:34:41.939Z"
+      "lastRun": "2026-05-14T05:43:30.332Z"
     },
     "google": {
       "seenUrls": [
@@ -63,15 +74,15 @@
         "https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/",
         "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/"
       ],
-      "lastRun": "2026-05-12T05:34:42.091Z"
+      "lastRun": "2026-05-14T05:43:30.495Z"
     },
     "alibaba": {
       "seenUrls": [],
-      "lastRun": "2026-05-12T05:34:44.372Z"
+      "lastRun": "2026-05-14T05:43:32.642Z"
     },
     "zhipu": {
       "seenUrls": [],
-      "lastRun": "2026-05-12T05:34:52.720Z"
+      "lastRun": "2026-05-14T05:43:44.035Z"
     },
     "moonshot": {
       "seenUrls": [
@@ -81,7 +92,7 @@
         "https://www.kimi.com/blog/kimi-k2-thinking",
         "https://www.kimi.com/blog/kimi-k2"
       ],
-      "lastRun": "2026-05-12T05:35:00.322Z"
+      "lastRun": "2026-05-14T05:43:49.700Z"
     },
     "minimax": {
       "seenUrls": [
@@ -100,7 +111,7 @@
         "https://minimaxi.com/news/minimax-m21",
         "https://minimaxi.com/news/minimax-m2"
       ],
-      "lastRun": "2026-05-12T05:35:28.674Z"
+      "lastRun": "2026-05-14T05:43:54.867Z"
     }
   }
 }

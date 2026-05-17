@@ -159,6 +159,13 @@
     zh: GPT-5.4 的精简版,针对编程、工具调用与高吞吐 API 场景优化。
     en: Smaller, faster GPT-5.4 variants tuned for coding, tool use, and high-volume API workloads.
   link: https://openai.com/index/introducing-gpt-5-4-mini-and-nano/
+- date: 2026-03-17
+  vendor: openai
+  model: GPT-5.4 mini
+  description:
+    zh: OpenAI发布GPT-5.4 mini和nano，轻量高效模型。
+    en: OpenAI launches GPT-5.4 mini and nano, lightweight and efficient models.
+  link: https://openai.com/index/introducing-gpt-5-4-mini-and-nano
 - date: 2026-04-16
   vendor: openai
   model: GPT-Rosalind
@@ -187,3 +194,10 @@
     zh: OpenAI发布GPT-5.5及专用变体GPT-5.5-Cyber，增强网络安全领域的可信访问能力。
     en: OpenAI launches GPT-5.5 and GPT-5.5-Cyber, enhancing trusted access for cybersecurity.
   link: https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber
+- date: 2026-05-15
+  vendor: openai
+  model: GPT-5.5
+  description:
+    zh: OpenAI发布GPT-5.5，专为Databricks企业代理工作流优化，提升推理与任务执行效率。
+    en: OpenAI launches GPT-5.5, optimized for Databricks enterprise agent workflows, enhancing reasoning and task execution.
+  link: https://openai.com/index/databricks
